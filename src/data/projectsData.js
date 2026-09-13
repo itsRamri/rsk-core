@@ -1,121 +1,103 @@
 /**
  * RSK Portfolio - Projects Database
- * Comprehensive Engineering Project Registry
+ * Hands-on PCB Design, Arduino, and Circuit Engineering Projects
  */
 
 export const projectsData = [
   {
     id: 'p1',
-    category: 'iot',
-    categoryLabel: 'IoT & Cloud Systems',
-    title: 'Smart Home Automation & Power Monitor',
-    subtitle: 'IoT-enabled Cloud Hub with Real-Time Current & Voltage Sensing',
-    description: 'Engineered an IoT-enabled automation hub featuring current sensing, voltage monitoring, and cloud-synced bidirectional device control with sub-50ms relay latency. Designed complete firmware in ESP-IDF with non-blocking FreeRTOS tasks to log real-time power metrics, calculate instantaneous wattage, and alert users against overload faults via push notifications.',
-    architecture: 'ESP32 MCU -> FreeRTOS Tasks -> MQTT Broker -> AWS IoT Cloud -> React Web App',
+    category: 'pcb',
+    categoryLabel: 'PCB Design & EDA',
+    title: 'Custom Microcontroller & Power Carrier Board',
+    subtitle: 'Schematic Capture & PCB Layout in Cadence OrCAD Capture CIS 17.2',
+    description: 'Designed and laid out a custom 2-layer microcontroller development PCB using Cadence OrCAD Capture CIS 17.2. Created complete component schematic symbols, footprints, power traces, ground copper pour, and generated fabrication-ready Gerber RS-274X and drill files with zero Design Rule Check (DRC) violations.',
+    architecture: 'Schematic Capture (OrCAD CIS 17.2) -> Footprint Mapping -> PCB Routing -> DRC Verification -> Gerber Export',
     specs: [
-      'Microcontroller: ESP32-WROOM-32 (240MHz Dual Core)',
-      'Peripherals: ACS712 Current Sensor, ZMPT101B Voltage Transformer, 4x Optocoupler Relays',
-      'Protocol: MQTT over TLS, WebSockets with sub-50ms roundtrip latency',
-      'Power: Onboard 5V/2A SMPS with thermal shutdown and surge protection'
+      'EDA Software: Cadence OrCAD Capture CIS (Version 17.2)',
+      'Layer Stackup: 2-Layer FR-4 with bottom solid ground copper pour',
+      'Power Stage: LM7805 & AMS1117 Linear Regulators (5V & 3.3V Rails) with decoupling capacitors',
+      'Manufacturing Outputs: Gerber RS-274X files, Excellon Drill files & Bill of Materials (BOM)'
     ],
-    tags: ['ESP32', 'FreeRTOS', 'MQTT', 'AWS IoT', 'ACS712'],
-    icon: 'fa-solid fa-house-signal',
+    tags: ['OrCAD Capture CIS 17.2', 'PCB Layout', 'Schematic Capture', 'Gerber RS-274X', 'DRC'],
+    icon: 'fa-solid fa-layer-group',
     github: 'https://github.com',
     live: '#projects'
   },
   {
     id: 'p2',
-    category: 'embedded',
-    categoryLabel: 'Embedded Systems & LoRa',
-    title: 'LoRa Long-Range Industrial Telemetry Node',
-    subtitle: 'Ultra-Low-Power Sensor Node for 5+ km Sub-GHz Data Transmission',
-    description: 'Developed an industrial-grade environmental monitoring node designed for harsh environments. Implemented adaptive data rate (ADR) algorithms and battery voltage telemetry to ensure up to 2 years of autonomous operation on a single Li-SOCl2 cell.',
-    architecture: 'STM32F401 -> SPI -> Semtech SX1278 -> 868MHz RF Link -> LoRa Gateway',
+    category: 'arduino',
+    categoryLabel: 'Arduino & Robotics',
+    title: 'Autonomous Obstacle Avoiding Robot',
+    subtitle: 'Mobile Rover with Arduino Uno, HC-SR04 Sensor & L298N Motor Driver',
+    description: 'Constructed an autonomous robotic vehicle controlled by an Arduino Uno. Interfaced an HC-SR04 ultrasonic distance sensor mounted on an SG90 micro servo to scan 180° ahead, calculate real-time distance vectors, and steer DC motors through an L298N H-bridge motor driver to avoid obstacles.',
+    architecture: 'HC-SR04 Sensor -> Arduino Uno -> Distance Calculation Logic -> L298N Motor Driver -> Dual Geared DC Motors',
     specs: [
-      'MCU: STM32F401RE ARM Cortex-M4 @ 84MHz',
-      'RF Module: Semtech SX1278 (868MHz, Spreading Factor SF7-SF12)',
-      'Power Consumption: 15μA deep sleep, 120mA peak TX (+20dBm)',
-      'Range: 5.4 km line-of-sight in urban testing environment'
+      'Microcontroller: Arduino Uno (ATmega328P @ 16MHz)',
+      'Sensor & Servo: HC-SR04 Ultrasonic Distance Sensor + SG90 Micro Servo',
+      'Motor Driver: L298N Dual H-Bridge Driver Module (2A peak output)',
+      'Power System: 2x 18650 3.7V Li-ion battery pack with power distribution switch'
     ],
-    tags: ['STM32', 'LoRa SX1278', 'SPI', 'Low-Power', 'C/C++'],
-    icon: 'fa-solid fa-tower-broadcast',
-    github: 'https://github.com',
-    live: '#projects'
-  },
-  {
-    id: 'p3',
-    category: 'robotics',
-    categoryLabel: 'Robotics & Control Systems',
-    title: 'Autonomous Obstacle Avoiding LiDAR Rover',
-    subtitle: '4WD Mobile Robot with Reactive Pathfinding & Sensor Fusion',
-    description: 'Constructed an autonomous ground vehicle capable of real-time 2D spatial mapping and dynamic obstacle avoidance. Programmed predictive turn vectors that eliminate corner traps and optimize transit time across cluttered indoor environments.',
-    architecture: 'Arduino Mega 2560 -> HC-SR04 & LiDAR -> Reactive Path Algorithm -> Dual L298N H-Bridges',
-    specs: [
-      'Controller: ATmega2560 MCU with 54 digital I/O pins',
-      'Sensing: Front 180° pan-tilt ultrasonic radar + 360° LiDAR telemetry',
-      'Drive: 4x 12V High-Torque Geared DC Motors with optical encoders',
-      'Control: Closed-loop PID velocity control with dead reckoning'
-    ],
-    tags: ['Arduino Mega', 'LiDAR', 'Ultrasonic', 'PID Control', 'Robotics'],
+    tags: ['Arduino Uno', 'HC-SR04', 'L298N Driver', 'C/C++', 'Robotics'],
     icon: 'fa-solid fa-robot',
     github: 'https://github.com',
     live: '#projects'
   },
   {
-    id: 'p4',
-    category: 'communication',
-    categoryLabel: 'Telecom & DSP',
-    title: 'SDR Digital Communication & QPSK Modem',
-    subtitle: 'Software-Defined Radio Pipeline with Carrier Recovery and BER Benchmarking',
-    description: 'Designed and simulated an end-to-end digital communication transceiver. Accurately modeled wireless channel impairments including Rayleigh fading, Doppler shift, and additive white Gaussian noise (AWGN) to evaluate synchronization stability and forward error correction (FEC).',
-    architecture: 'Bitstream -> QPSK Constellation Mapper -> RRC Pulse Shaping -> AWGN Channel -> Costas Loop Receiver',
+    id: 'p3',
+    category: 'circuits',
+    categoryLabel: 'Basic Circuits & Power Supply',
+    title: '5V Regulated DC Power Supply Circuit',
+    subtitle: 'Step-Down Linear Power Supply with Bridge Rectifier & 7805 Regulator',
+    description: 'Designed, breadboarded, and tested a linear regulated DC power supply circuit. Built a complete step-down and rectification stage using a step-down transformer, full-wave diode bridge, electrolytic filter capacitors for ripple reduction, and an LM7805 IC to supply a smooth 5V DC output with LED indicators.',
+    architecture: '230V AC Mains -> Step-Down Transformer (12V AC) -> 1N4007 Bridge Rectifier -> 1000µF Filter -> LM7805 -> Regulated 5V DC',
     specs: [
-      'Environment: MATLAB, Simulink & GNU Radio',
-      'Modulation: QPSK / 16-QAM with Root-Raised Cosine (RRC) filtering (α=0.35)',
-      'Synchronization: Costas Loop for carrier frequency/phase recovery, Gardner timing detector',
-      'Evaluation: Monte Carlo BER vs. Eb/N0 curve verification against theoretical limits'
+      'Input Voltage: 230V AC stepped down to 12V AC via 500mA transformer',
+      'Rectifier: Full-wave bridge rectifier using 4x 1N4007 silicon diodes',
+      'Filter Stage: 1000µF electrolytic capacitor for low ripple factor (< 1%)',
+      'Regulator: LM7805 IC delivering constant +5V DC with current limiting & LED power indicator'
     ],
-    tags: ['MATLAB', 'Simulink', 'DSP', 'QPSK Modem', 'SDR'],
-    icon: 'fa-solid fa-satellite-dish',
+    tags: ['LM7805', 'Bridge Rectifier', 'Filter Capacitors', 'Circuit Analysis', 'Breadboard'],
+    icon: 'fa-solid fa-bolt',
+    github: 'https://github.com',
+    live: '#projects'
+  },
+  {
+    id: 'p4',
+    category: 'arduino',
+    categoryLabel: 'Arduino & Automation',
+    title: 'Smart Automatic Light & Relay Controller',
+    subtitle: 'Automated Room Light Switch using Arduino & LDR Sensor Module',
+    description: 'Built an automated lighting system using an Arduino microcontroller and a Light Dependent Resistor (LDR). Programmed threshold calibration and debouncing logic to sense ambient lighting and safely switch 230V AC appliances via an opto-isolated relay module.',
+    architecture: 'LDR Light Sensor -> Arduino Analog In -> Threshold Logic -> 5V Optocoupler Relay -> AC Lamp',
+    specs: [
+      'Controller: Arduino Nano / Uno Microcontroller Board',
+      'Sensor: Light Dependent Resistor (LDR) with 10kΩ voltage divider resistor',
+      'Relay Module: 5V 1-Channel Opto-Isolated Relay (Rated 10A 250V AC)',
+      'Firmware: Embedded C++ with hysteresis debouncing to prevent relay chattering'
+    ],
+    tags: ['Arduino', 'LDR Sensor', 'Relay Module', 'Automation', 'Embedded C'],
+    icon: 'fa-solid fa-lightbulb',
     github: 'https://github.com',
     live: '#projects'
   },
   {
     id: 'p5',
-    category: 'electronics',
-    categoryLabel: 'PCB Design & Hardware Engineering',
-    title: '4-Layer High-Speed ESP32 Carrier Board',
-    subtitle: 'Custom Multi-Layer PCB with Controlled Impedance & Power Delivery',
-    description: 'Designed a high-density 4-layer development board tailored for IoT deployment. Focused on return current path integrity, thermal dissipation vias under high-current LDOs, and high-frequency decoupling capacitor placement.',
-    architecture: 'Schematic Capture -> Stackup Planning -> High-Speed Routing -> DRC & DFM -> SMT Assembly',
+    category: 'circuits',
+    categoryLabel: 'Basic Circuits & Analog Electronics',
+    title: 'Automatic Dark Sensor & Transistor Switch',
+    subtitle: 'Autonomous Light-Activated Electronic Switch using BC547 Transistor',
+    description: 'Constructed an analog dark-activated automatic switch using a BC547 NPN bipolar junction transistor. Configured a voltage divider with an LDR and potentiometer to accurately trigger the transistor base-emitter junction and illuminate high-brightness LEDs when light drops below a threshold.',
+    architecture: 'LDR + Potentiometer Divider -> BC547 Transistor Base -> Collector Current Switch -> LED Output',
     specs: [
-      'Layer Stackup: Signal / GND Plane / Power Plane / Signal (FR4, 1.6mm)',
-      'EDA Tools: OrCAD Capture CIS 17.2',
-      'Features: 50Ω coplanar waveguide RF trace, USB-C ESD protection, LiPo charging IC',
-      'Fabrication: Passed automated optical inspection (AOI) with zero DRC violations'
+      'Transistor: BC547 NPN Bipolar Junction Transistor (BJT)',
+      'Sensitivity Control: 10kΩ Potentiometer for variable threshold tuning',
+      'Power: 9V DC Battery supply with reverse polarity protection diode',
+      'Testing: Verified base-emitter switching voltage (0.7V) with digital multimeter'
     ],
-    tags: ['OrCAD Capture CIS 17.2', 'PCB Designing', 'Schematic Capture', 'DRC'],
+    tags: ['BC547', 'LDR', 'Transistor Switch', 'Analog Circuit', 'Soldering'],
     icon: 'fa-solid fa-microchip',
-    github: 'https://github.com',
-    live: '#projects'
-  },
-  {
-    id: 'p6',
-    category: 'iot',
-    categoryLabel: 'IoT & Environmental Sensing',
-    title: 'Smart Environmental & Air Quality Station',
-    subtitle: 'Autonomous Solar-Powered Sensor Node with Multi-Gas AQI Computation',
-    description: 'Deployed an autonomous weather and air quality monitoring station. Designed custom compensation algorithms to convert raw sensor resistance into standard European Air Quality Index (AQI) values with continuous cloud logging.',
-    architecture: 'BME680 + PMS5003 -> I2C / UART -> ESP8266 -> MQTT -> Firebase Cloud',
-    specs: [
-      'Sensors: Bosch BME680 (Temp/Hum/Press/VOC) & Plantower PMS5003 (PM1.0/2.5/10)',
-      'Display: 0.96-inch Monochrome OLED (I2C interface)',
-      'Power: 5W Monocrystalline Solar Panel + TP4056 MPPT Charger + 18650 Battery',
-      'Telemetry: Automatic calibration against humidity variations for accurate VOC AQI'
-    ],
-    tags: ['ESP8266', 'BME680', 'PMS5003', 'OLED', 'Solar MPPT'],
-    icon: 'fa-solid fa-wind',
     github: 'https://github.com',
     live: '#projects'
   }
 ];
+

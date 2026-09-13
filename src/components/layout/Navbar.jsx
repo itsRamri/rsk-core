@@ -9,7 +9,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 30);
+      setIsScrolled(window.scrollY > 20);
 
       const sections = document.querySelectorAll('section[id]');
       const scrollY = window.pageYOffset;
@@ -41,93 +41,86 @@ export const Navbar = () => {
   const navLinks = [
     { label: 'HOME', href: '#hero', id: 'hero' },
     { label: 'ABOUT', href: '#about', id: 'about' },
-    { label: 'PROJECTS', href: '#achievements', id: 'achievements' },
-    { label: 'SKILLS', href: '#timeline', id: 'timeline' },
+    { label: 'PROJECTS', href: '#projects', id: 'projects' },
+    { label: 'SKILLS', href: '#skills', id: 'skills' },
     { label: 'CONTACT', href: '#contact', id: 'contact' },
   ];
 
   return (
     <>
-      <header className={`modern-navbar-header ${isScrolled ? 'scrolled' : ''}`} id="header">
-        <div className="container nav-wrapper">
+      <header className={`rsk-navbar ${isScrolled ? 'scrolled' : ''}`} id="header">
+        <div className="container rsk-nav-container">
           
-          {/* Left: Brand Logo */}
-          <div className="nav-left-section">
-            <a href="#hero" className="nav-brand-logo" title="RSK - Shubham Kumar">
-              <span className="brand-name">RSK<span className="brand-dot-accent">.</span></span>
+          {/* Left: Brand Logo (RSK.) */}
+          <div className="rsk-nav-brand">
+            <a href="#hero" className="rsk-brand-logo" title="RSK Portfolio">
+              <span className="brand-text">RSK<span className="brand-dot">.</span></span>
             </a>
           </div>
 
           {/* Center: Navigation Links */}
-          <nav className={`nav-center-menu ${isMobileMenuOpen ? 'mobile-open' : ''}`} aria-label="Main Navigation">
-            <ul className="nav-links-list">
+          <nav className={`rsk-nav-menu ${isMobileMenuOpen ? 'mobile-open' : ''}`} aria-label="Main Navigation">
+            <ul className="rsk-nav-list">
               {navLinks.map((link) => (
-                <li key={link.id} className="nav-item">
+                <li key={link.id} className="rsk-nav-item">
                   <a
                     href={link.href}
-                    className={`nav-link-item ${activeSection === link.id ? 'active' : ''}`}
+                    className={`rsk-nav-link ${activeSection === link.id ? 'active' : ''}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <span className="nav-link-text">{link.label}</span>
-                    {activeSection === link.id && <span className="nav-active-bar" />}
+                    <span>{link.label}</span>
+                    {activeSection === link.id && <span className="rsk-nav-active-line" />}
                   </a>
                 </li>
               ))}
             </ul>
           </nav>
 
-          {/* Right: Actions (Theme Light/Dark Toggle & Let's Talk CTA) */}
-          <div className="nav-right-actions">
-            
-            {/* Light / Dark Mode Toggle Button */}
+          {/* Right: Theme Toggle + LET'S TALK ↗ Button + Mobile Hamburger */}
+          <div className="rsk-nav-actions">
+            {/* Theme Toggle Button (Moon / Sun) */}
             <button
               type="button"
-              className="theme-mode-toggle"
+              className="rsk-theme-toggle-btn"
               onClick={toggleMode}
-              title={`Switch to ${mode === 'light' ? 'Dark' : 'Light'} Mode`}
-              aria-label="Toggle theme appearance"
+              aria-label="Toggle theme mode"
+              title={`Switch to ${mode === 'dark' ? 'light' : 'dark'} mode`}
             >
-              {mode === 'light' ? (
-                <i className="fa-solid fa-moon"></i>
+              {mode === 'dark' ? (
+                <i className="fa-solid fa-sun theme-icon-sun"></i>
               ) : (
-                <i className="fa-solid fa-sun"></i>
+                <i className="fa-solid fa-moon theme-icon-moon"></i>
               )}
             </button>
 
-            {/* Let's Talk CTA Button */}
+            {/* Let's Talk CTA */}
             <a
-              href="#contact-form"
-              className="nav-cta-talk-btn"
+              href="#contact"
+              className="rsk-nav-talk-btn"
               onClick={(e) => {
                 setIsMobileMenuOpen(false);
-                const formElement = document.getElementById('contact-form') || document.getElementById('contact');
-                if (formElement) {
+                const contactEl = document.getElementById('contact-form') || document.getElementById('contact');
+                if (contactEl) {
                   e.preventDefault();
-                  formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  setTimeout(() => {
-                    const nameInput = document.getElementById('name');
-                    if (nameInput) nameInput.focus({ preventScroll: true });
-                  }, 450);
+                  contactEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
               }}
             >
-              <span>Let's Talk</span>
-              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              <span>LET'S TALK</span>
+              <i className="fa-solid fa-arrow-up-right-from-square nav-talk-arrow"></i>
             </a>
 
-            {/* Mobile Hamburger Button */}
+            {/* Mobile Hamburger */}
             <button
-              className={`nav-mobile-hamburger ${isMobileMenuOpen ? 'open' : ''}`}
-              id="mobile-hamburger-btn"
+              className={`rsk-hamburger ${isMobileMenuOpen ? 'open' : ''}`}
               aria-label="Toggle navigation menu"
               aria-expanded={isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              <span className="bar bar-top"></span>
-              <span className="bar bar-mid"></span>
-              <span className="bar bar-bot"></span>
+              <span className="bar bar-1"></span>
+              <span className="bar bar-2"></span>
+              <span className="bar bar-3"></span>
             </button>
-
           </div>
 
         </div>
@@ -136,7 +129,7 @@ export const Navbar = () => {
       {/* Mobile Menu Backdrop */}
       {isMobileMenuOpen && (
         <div 
-          className="mobile-nav-backdrop" 
+          className="rsk-mobile-backdrop" 
           onClick={() => setIsMobileMenuOpen(false)} 
           aria-hidden="true" 
         />
@@ -144,3 +137,5 @@ export const Navbar = () => {
     </>
   );
 };
+
+export default Navbar;

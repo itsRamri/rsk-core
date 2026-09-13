@@ -4,220 +4,197 @@ export const HeroSection = ({ onOpenResume }) => {
   const [portraitLoaded, setPortraitLoaded] = useState(false);
 
   return (
-    <section className="rsk-editorial-hero" id="hero">
-      {/* Warm Ambience & Sunlight/Leaf Shadow Layer */}
-      <div className="hero-sunlight-overlay" aria-hidden="true" />
+    <section className="rsk-new-hero-section" id="hero">
+      
+      {/* ------------------------------------------------------------
+          BACKGROUND LAYERS: Dashed Orbit Ring, Plus Markers
+          ------------------------------------------------------------ */}
+      <div className="rsk-hero-bg-rings" aria-hidden="true">
+        <svg viewBox="0 0 600 600" className="dskr-ring-svg">
+          <circle
+            cx="300"
+            cy="300"
+            r="250"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.2"
+            strokeDasharray="4 6"
+            className="ring-dashed"
+          />
+        </svg>
+      </div>
 
-      {/* Subtle Crosshairs in Grid */}
-      <span className="hero-crosshair crosshair-top-left" aria-hidden="true">+</span>
-      <span className="hero-crosshair crosshair-mid-center" aria-hidden="true">+</span>
+      {/* Decorative Plus Marker */}
+      <div className="rsk-plus-marker marker-mid" aria-hidden="true">+</div>
 
-      {/* Main Content Container */}
-      <div className="container hero-layout-container">
+      {/* ============================================================
+          MAIN HERO CONTENT (2-Column Grid)
+          ============================================================ */}
+      <div className="container rsk-hero-main-container">
         
-        {/* ============================================================
-            LEFT COLUMN: Bio, Title, CTA & Metric Strip
-            ============================================================ */}
-        <div className="hero-left-column">
+        {/* ------------------------------------------------------------
+            LEFT COLUMN: Badge, Headline, Bio, Motto, Buttons, Stats
+            ------------------------------------------------------------ */}
+        <div className="rsk-hero-left-col">
           
-          {/* Eyebrow / Category Tag */}
-          <div className="hero-eyebrow-wrapper">
-            <div className="hero-eyebrow-bullet">
-              <span className="eyebrow-outer-ring">
-                <span className="eyebrow-inner-dot"></span>
-              </span>
-              <span className="eyebrow-connector-line"></span>
+          {/* Target / Circuit Badge */}
+          <div className="rsk-hero-badge">
+            <div className="badge-target-icon">
+              <span className="target-dot">◎</span>
+              <span className="target-line">──</span>
             </div>
-            <div className="hero-eyebrow-text">
-              <span>ELECTRONICS & COMMUNICATION ENGINEERING</span>
-              <span className="eyebrow-sub">STUDENT</span>
-            </div>
+            <span className="badge-text">ELECTRONICS &amp; COMMUNICATION ENGINEERING STUDENT</span>
           </div>
 
-          {/* Main Hero Headline */}
-          <h1 className="hero-headline">
-            <span className="headline-dark">Hello,</span>
-            <span className="headline-bronze">I’m Shubham.</span>
+          {/* Main Headline */}
+          <h1 className="rsk-hero-headline">
+            Hello,<br />
+            <span className="highlight-bronze-headline">I'm Shubham.</span>
           </h1>
 
-          {/* Intro Description */}
-          <p className="hero-tagline">
-            I build electronic systems, digital experiences and technology-driven solutions.
+          {/* Bio Description */}
+          <p className="rsk-hero-bio">
+            I build electronic systems, digital experiences and<br className="desktop-br" />
+            technology-driven solutions.
           </p>
 
-          {/* Handwritten Script Motto */}
-          <div className="hero-handwritten-motto" aria-hidden="true">
-            Build. Learn. Create.
+          {/* Handwritten Motto */}
+          <div className="rsk-hero-motto">
+            <span>Build. Learn. Create.</span>
           </div>
 
-          {/* Action Buttons */}
-          <div className="hero-button-group">
-            <a href="#achievements" className="rsk-btn-primary">
+          {/* Action Buttons: VIEW PROJECTS ↗ & CONTACT ME */}
+          <div className="rsk-hero-cta-group">
+            <a href="#projects" className="rsk-btn-primary">
               <span>VIEW PROJECTS</span>
-              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              <i className="fa-solid fa-arrow-up-right-from-square btn-icon-ext"></i>
             </a>
             <a href="#contact" className="rsk-btn-secondary">
               <span>CONTACT ME</span>
             </a>
           </div>
 
-          {/* Bottom Left Metrics / Badge Strip */}
-          <div className="hero-metrics-strip">
-            
-            {/* Metric Item 1 */}
-            <div className="metric-item">
-              <div className="metric-icon">
-                <i className="fa-solid fa-microchip"></i>
-              </div>
-              <div className="metric-content">
-                <span className="metric-value">03+</span>
-                <span className="metric-label">PROJECTS</span>
+          {/* Bottom Left Stats Bar (Matching Screenshot) */}
+          <div className="rsk-hero-stats-bar">
+            {/* Stat 1: Projects */}
+            <div className="stats-item">
+              <i className="fa-solid fa-microchip stat-icon"></i>
+              <div className="stat-content">
+                <span className="stat-value">03+</span>
+                <span className="stat-label">PROJECTS</span>
               </div>
             </div>
 
-            <div className="metric-divider"></div>
-
-            {/* Metric Item 2 */}
-            <div className="metric-item">
-              <div className="metric-icon">
-                <i className="fa-solid fa-tower-broadcast"></i>
-              </div>
-              <div className="metric-content">
-                <span className="metric-value">ECE</span>
-                <span className="metric-label">ENGINEERING</span>
+            {/* Stat 2: ECE */}
+            <div className="stats-item">
+              <span className="stat-icon-signal">((•))</span>
+              <div className="stat-content">
+                <span className="stat-value">ECE</span>
+                <span className="stat-label">ENGINEERING</span>
               </div>
             </div>
 
-            <div className="metric-divider"></div>
-
-            {/* Metric Item 3 */}
-            <div className="metric-item">
-              <div className="metric-icon">
-                <i className="fa-solid fa-location-dot"></i>
-              </div>
-              <div className="metric-content">
-                <span className="metric-value">INDIA</span>
-                <span className="metric-label">AVAILABLE</span>
+            {/* Stat 3: India / Available */}
+            <div className="stats-item">
+              <i className="fa-solid fa-location-dot stat-icon"></i>
+              <div className="stat-content">
+                <span className="stat-value">INDIA</span>
+                <span className="stat-label">AVAILABLE</span>
               </div>
             </div>
-
-            <div className="metric-divider"></div>
-
-            {/* Compact Scroll Down Indicator on Left */}
-            <a href="#about" className="hero-scroll-metric-item" aria-label="Scroll to About Section">
-              <div className="scroll-indicator-icon">
-                <span className="scroll-outer-circle">
-                  <span className="scroll-center-line"></span>
-                </span>
-              </div>
-              <div className="scroll-indicator-text">
-                <span>SCROLL</span>
-                <span>DOWN</span>
-              </div>
-              <div className="scroll-indicator-arrow">
-                <i className="fa-solid fa-arrow-down"></i>
-              </div>
-            </a>
-
           </div>
 
         </div>
 
-        {/* ============================================================
-            CENTER-RIGHT COLUMN: Giant 'RSK' Typography + Orbit + Cutout Portrait
-            ============================================================ */}
-        <div className="hero-center-column">
+        {/* ------------------------------------------------------------
+            RIGHT COLUMN: Giant RSK, Doodle, Tagline, PCB Traces, Photo
+            ------------------------------------------------------------ */}
+        <div className="rsk-hero-right-col">
           
-          {/* Faint Dashed Orbit Ring behind head & letters (like DSK reference) */}
-          <div className="hero-orbit-ring" aria-hidden="true">
-            <svg viewBox="0 0 500 500" className="orbit-svg">
-              <circle cx="250" cy="250" r="230" fill="none" stroke="rgba(92, 78, 61, 0.22)" strokeWidth="1.5" strokeDasharray="7 7" />
+          {/* Top-Left Handwritten Doodle with smooth rightward arrow */}
+          <div className="rsk-doodle-wrapper" aria-hidden="true">
+            <div className="doodle-text">
+              <span>App Development</span>
+              <span>Electronics &amp; IoT</span>
+              <span>Web Development</span>
+            </div>
+            <div className="doodle-arrow-curved">
+              <svg viewBox="0 0 55 40" className="scribble-arrow-svg" fill="none">
+                <path
+                  d="M 6 8 C 18 16, 32 22, 46 25"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M 36 19 L 46 25 L 38 31"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+
+          {/* Top-Right Stacked Tagline with Bullets (• DREAM • DESIGN • DEVELOP) */}
+          <div className="rsk-stacked-tagline" aria-hidden="true">
+            <span>• DREAM</span>
+            <span>• DESIGN</span>
+            <span>• DEVELOP</span>
+          </div>
+
+          {/* Giant RSK Typography Behind Cutout */}
+          <div className="rsk-giant-letters-bg" aria-hidden="true">
+            <span className="giant-char char-r">R</span>
+            <span className="giant-char char-s">S</span>
+            <span className="giant-char char-k">K</span>
+          </div>
+
+          {/* Cursive Overlapping Signature Shubham over letter K */}
+          <div className="rsk-script-signature" aria-hidden="true">
+            <span>Shubham</span>
+          </div>
+
+          {/* PCB Circuit Traces Graphic (Bottom-Right behind arm) */}
+          <div className="rsk-pcb-traces-svg" aria-hidden="true">
+            <svg viewBox="0 0 260 200" className="pcb-svg">
+              <circle cx="20" cy="140" r="3.5" fill="#786B5A" />
+              <line x1="20" y1="140" x2="70" y2="140" stroke="#786B5A" strokeWidth="1.5" />
+              <line x1="70" y1="140" x2="110" y2="100" stroke="#786B5A" strokeWidth="1.5" />
+              <circle cx="110" cy="100" r="3.5" fill="#786B5A" />
+              <line x1="110" y1="100" x2="170" y2="100" stroke="#786B5A" strokeWidth="1.5" />
+              <line x1="170" y1="100" x2="210" y2="60" stroke="#786B5A" strokeWidth="1.5" />
+              <circle cx="210" cy="60" r="3.5" fill="#786B5A" />
+              <line x1="210" y1="60" x2="250" y2="60" stroke="#786B5A" strokeWidth="1.5" />
+              
+              <line x1="130" y1="100" x2="160" y2="130" stroke="#786B5A" strokeWidth="1.2" strokeDasharray="3 3" />
+              <circle cx="160" cy="130" r="2.5" fill="#786B5A" />
+              <line x1="160" y1="130" x2="220" y2="130" stroke="#786B5A" strokeWidth="1.2" />
+              <circle cx="220" cy="130" r="2.5" fill="#786B5A" />
             </svg>
           </div>
 
-          {/* Giant 'RSK' Typography (matching DSKR in reference) */}
-          <div className="hero-giant-watermark" aria-hidden="true">
-            <span className="watermark-letter watermark-r">R</span>
-            <span className="watermark-letter watermark-s">S</span>
-            <span className="watermark-letter watermark-k">K</span>
-          </div>
-
-          {/* Handwritten Cursive 'Shubham' signature over 'K' (like 'Deepak' in reference) */}
-          <div className="hero-cursive-name" aria-hidden="true">
-            Shubham
-          </div>
-
-          {/* Shubham Cutout Portrait */}
-          <div className={`hero-portrait-stage ${portraitLoaded ? 'image-loaded' : ''}`}>
+          {/* Cutout Portrait Image Stage */}
+          <div className={`rsk-cutout-container ${portraitLoaded ? 'loaded' : ''}`}>
             <img
               src="/ezgif-476a1f2348609364-jpg/shubham-cutout.png"
               alt="Ramri Shubham Kumar"
-              className="hero-person-cutout"
+              className="rsk-cutout-image"
               onLoad={() => setPortraitLoaded(true)}
               loading="eager"
             />
           </div>
 
-          {/* Handwritten Annotation pointing to 'R' (like App/SaaS Development in reference) */}
-          <div className="hero-annotation-shoulder" aria-hidden="true">
-            <div className="annotation-text-line">App Development</div>
-            <div className="annotation-text-line">Electronics & IoT</div>
-            <div className="annotation-text-line">Web Development</div>
-            <div className="annotation-arrow">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <path d="M6 6 C 18 8, 26 18, 28 28" stroke="#5D5043" strokeWidth="1.8" strokeLinecap="round" strokeDasharray="3 3"/>
-                <path d="M22 28 L 28 29 L 29 23" stroke="#5D5043" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-          </div>
-
         </div>
 
-        {/* ============================================================
-            RIGHT COLUMN: Mantra, PCB Circuit Graphic & Scroll Indicator
-            ============================================================ */}
-        <div className="hero-right-column">
-          
-          {/* Vertical Mantra */}
-          <div className="hero-mantra-list">
-            <div className="mantra-item">
-              <span className="mantra-dot"></span>
-              <span className="mantra-text">DREAM</span>
-            </div>
-            <div className="mantra-item">
-              <span className="mantra-dot"></span>
-              <span className="mantra-text">DESIGN</span>
-            </div>
-            <div className="mantra-item">
-              <span className="mantra-dot"></span>
-              <span className="mantra-text">DEVELOP</span>
-            </div>
-          </div>
+      </div>
 
-          {/* PCB / Circuit Trace Graphic */}
-          <div className="hero-pcb-graphic" aria-hidden="true">
-            <svg width="180" height="240" viewBox="0 0 180 240" fill="none" className="pcb-svg">
-              {/* Circuit Paths */}
-              <circle cx="160" cy="40" r="3.5" className="pcb-node" />
-              <line x1="160" y1="40" x2="160" y2="90" className="pcb-line" />
-              <line x1="160" y1="90" x2="110" y2="140" className="pcb-line" />
-              <circle cx="110" cy="140" r="3" className="pcb-node" />
-              <line x1="110" y1="140" x2="60" y2="140" className="pcb-line" />
-              
-              <circle cx="140" cy="115" r="3.5" className="pcb-node" />
-              <line x1="140" y1="115" x2="80" y2="175" className="pcb-line" />
-              <line x1="80" y1="175" x2="30" y2="175" className="pcb-line" />
-              <circle cx="30" cy="175" r="3" className="pcb-node" />
-              <line x1="30" y1="175" x2="10" y2="195" className="pcb-line" />
-              <circle cx="10" cy="195" r="3.5" className="pcb-node" />
-
-              <line x1="110" y1="140" x2="110" y2="180" className="pcb-line" />
-              <line x1="110" y1="180" x2="80" y2="210" className="pcb-line" />
-              <circle cx="80" cy="210" r="3" className="pcb-node" />
-            </svg>
-          </div>
+      {/* Horizontal Divider Line above Biography / About Section */}
+      <div className="rsk-hero-bottom-divider" aria-hidden="true">
+        <div className="container">
+          <div className="hero-divider-bar"></div>
         </div>
-
       </div>
 
     </section>

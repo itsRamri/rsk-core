@@ -5,11 +5,9 @@ import { ProjectCard } from './ProjectCard';
 
 const projectFilters = [
   { id: 'all', label: 'All Projects', icon: 'fa-solid fa-layer-group' },
-  { id: 'iot', label: 'IoT Systems', icon: 'fa-solid fa-wifi' },
-  { id: 'embedded', label: 'Embedded & LoRa', icon: 'fa-solid fa-microchip' },
-  { id: 'robotics', label: 'Robotics', icon: 'fa-solid fa-robot' },
-  { id: 'communication', label: 'DSP & Telecom', icon: 'fa-solid fa-satellite-dish' },
-  { id: 'electronics', label: 'PCB & Hardware', icon: 'fa-solid fa-circuit-board' }
+  { id: 'pcb', label: 'PCB Design', icon: 'fa-solid fa-circuit-board' },
+  { id: 'arduino', label: 'Arduino Projects', icon: 'fa-solid fa-robot' },
+  { id: 'circuits', label: 'Basic Circuits', icon: 'fa-solid fa-bolt' }
 ];
 
 export const ProjectsSection = ({ onSelectProject }) => {

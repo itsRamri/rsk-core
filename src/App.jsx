@@ -6,6 +6,9 @@ import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { HeroSection } from './components/hero/HeroSection';
 import { AboutSection } from './components/about/AboutSection';
+import { SkillsSection } from './components/skills/SkillsSection';
+import { ProjectsSection } from './components/projects/ProjectsSection';
+import { ProjectModal } from './components/projects/ProjectModal';
 import { TimelineSection } from './components/timeline/TimelineSection';
 import { AchievementsSection } from './components/achievements/AchievementsSection';
 import { ContactSection } from './components/contact/ContactSection';
@@ -14,6 +17,7 @@ import { ResumeModal } from './components/resume/ResumeModal';
 
 export const AppContent = () => {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
   const [toasts, setToasts] = useState([]);
 
   // Initialize IntersectionObserver scroll reveal
@@ -36,10 +40,12 @@ export const AppContent = () => {
       {/* Primary Header / Navigation */}
       <Navbar />
 
-      {/* Main Content Flow */}
+      {/* Main Content Flow: Hero -> About -> Projects -> Skills -> Timeline -> Achievements -> Contact */}
       <main>
         <HeroSection onOpenResume={() => setIsResumeOpen(true)} />
         <AboutSection />
+        <ProjectsSection onSelectProject={(project) => setSelectedProject(project)} />
+        <SkillsSection />
         <TimelineSection />
         <AchievementsSection />
         <ContactSection onShowToast={showToast} />
@@ -47,6 +53,13 @@ export const AppContent = () => {
 
       {/* Footer */}
       <Footer />
+
+      {/* Project Detail Modal */}
+      <ProjectModal
+        project={selectedProject}
+        isOpen={!!selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
 
       {/* Resume Modal */}
       <ResumeModal
