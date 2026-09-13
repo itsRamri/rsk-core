@@ -672,8 +672,8 @@ body[data-mode="dark"] .stats-item:not(:last-child) {
 /* Top-Left Handwritten Doodle (Shifted left so arrow curves over letter R) */
 .rsk-doodle-wrapper {
   position: absolute;
-  top: 4%;
-  left: -50px;
+  top: 2%;
+  left: -85px;
   z-index: 12;
   pointer-events: none;
   user-select: none;
@@ -772,17 +772,17 @@ body[data-mode="dark"] .rsk-stacked-tagline {
   margin-right: 0;
 }
 
-/* Cursive Overlapping Signature Shubham over K (Matching Screenshot) */
+/* Cursive Overlapping Signature Shubham (Below K and clear of hand/arm) */
 .rsk-script-signature {
   position: absolute;
-  top: 54%;
-  right: -2%;
+  top: 74%;
+  right: -25px;
   z-index: 9;
   font-family: var(--font-script);
-  font-size: clamp(3.2rem, 4.6vw, 4.4rem);
+  font-size: clamp(3rem, 4.4vw, 4.2rem);
   font-weight: 600;
   color: #2E2721;
-  transform: rotate(-6deg);
+  transform: rotate(-5deg);
   pointer-events: none;
   user-select: none;
 }
@@ -840,72 +840,18 @@ body[data-mode="dark"] .rsk-script-signature {
   transform-origin: bottom center;
 }
 
-/* Hero Bottom Footer Bar (Scroll Down & Status) */
-.rsk-hero-bottom-footer-bar {
-  width: 100%;
-  position: relative;
-  z-index: 10;
-  margin-top: 1.5rem;
-  padding-bottom: 0.6rem;
-}
-
-.rsk-hero-footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.hero-scroll-down-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.76rem;
-  font-weight: 750;
-  letter-spacing: 0.14em;
+.stat-scroll-icon {
+  font-size: 1.15rem;
   color: var(--text-heading);
-  text-decoration: none;
-  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.hero-scroll-down-link:hover {
-  transform: translateY(2px);
-  opacity: 0.8;
-}
-
-.hero-availability-tag {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 0.74rem;
+.stat-scroll-text {
+  font-size: 0.65rem;
   font-weight: 750;
-  letter-spacing: 0.16em;
+  line-height: 1.15;
+  letter-spacing: 0.08em;
   color: var(--text-heading);
-  opacity: 0.9;
-}
-
-.dot-sep {
-  color: var(--brand-bronze);
-  font-size: 0.9rem;
-}
-
-/* Full Width Dark Horizontal Line Directly Above Biography */
-.rsk-hero-full-divider {
-  width: 100%;
-  position: relative;
-  z-index: 10;
-  padding: 0;
-  margin-top: 0.4rem;
-}
-
-.full-width-dark-bar {
-  width: 100%;
-  height: 1.5px;
-  background: rgba(46, 39, 33, 0.45);
-}
-
-body[data-mode="dark"] .full-width-dark-bar {
-  background: rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
 }
 
 /* ==========================================================================
