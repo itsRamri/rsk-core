@@ -119,17 +119,20 @@ export const HeroSection = ({ onOpenResume }) => {
               <span>Web Development</span>
             </div>
             <div className="doodle-arrow-curved">
-              <svg viewBox="0 0 55 40" className="scribble-arrow-svg" fill="none">
+              <svg viewBox="0 0 50 48" className="scribble-arrow-svg" fill="none">
+                {/* Dashed curved line */}
                 <path
-                  d="M 6 8 C 18 16, 32 22, 46 25"
+                  d="M 6 6 C 18 9, 32 20, 40 38"
                   stroke="currentColor"
-                  strokeWidth="1.6"
+                  strokeWidth="2.4"
+                  strokeDasharray="4.2 3.2"
                   strokeLinecap="round"
                 />
+                {/* Hand-drawn arrowhead */}
                 <path
-                  d="M 36 19 L 46 25 L 38 31"
+                  d="M 28 35 L 40 39 L 41 27"
                   stroke="currentColor"
-                  strokeWidth="1.6"
+                  strokeWidth="2.4"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />

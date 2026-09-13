@@ -679,10 +679,10 @@ body[data-mode="dark"] .doodle-text {
 }
 
 .doodle-arrow-curved {
-  width: 48px;
-  height: 34px;
-  margin-left: 2rem;
-  margin-top: 0.15rem;
+  width: 52px;
+  height: 48px;
+  margin-left: 2.2rem;
+  margin-top: 0.2rem;
   color: var(--brand-bronze);
 }
 
