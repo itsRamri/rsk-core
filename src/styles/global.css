@@ -669,11 +669,29 @@ body[data-mode="dark"] .stats-item:not(:last-child) {
   z-index: 6;
 }
 
-/* Top-Left Handwritten Doodle (Shifted left so arrow curves over letter R) */
+/* Dashed Orbit Ring around the head (Matching Screenshot) */
+.rsk-hero-head-ring {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 440px;
+  height: 440px;
+  z-index: 1;
+  pointer-events: none;
+  color: var(--brand-bronze);
+  opacity: 0.55;
+}
+
+body[data-mode="dark"] .rsk-hero-head-ring {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* Top-Left Handwritten Doodle (Matching Screenshot) */
 .rsk-doodle-wrapper {
   position: absolute;
-  top: 2%;
-  left: -85px;
+  top: 4%;
+  left: -25px;
   z-index: 12;
   pointer-events: none;
   user-select: none;
@@ -710,8 +728,8 @@ body[data-mode="dark"] .doodle-text {
 /* Top-Right Stacked Tagline (Matching Screenshot) */
 .rsk-stacked-tagline {
   position: absolute;
-  top: 9%;
-  right: 3%;
+  top: 8%;
+  right: 4%;
   z-index: 12;
   display: flex;
   flex-direction: column;
@@ -734,7 +752,7 @@ body[data-mode="dark"] .rsk-stacked-tagline {
 /* Giant RSK Typography Behind Cutout (Centered and Non-Clipped, S behind head) */
 .rsk-giant-letters-bg {
   position: absolute;
-  top: 48%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -755,34 +773,42 @@ body[data-mode="dark"] .rsk-stacked-tagline {
   font-weight: 900;
   line-height: 0.8;
   letter-spacing: -0.04em;
-  color: var(--giant-letter-color);
-  opacity: 0.85;
+  color: #4A3E35;
+  opacity: 0.92;
   display: block;
 }
 
+body[data-mode="dark"] .giant-char {
+  color: var(--giant-letter-color);
+  opacity: 0.85;
+}
+
 .char-r {
-  margin-left: 0;
+  flex: 1;
+  text-align: left;
 }
 
 .char-s {
-  margin: 0 auto;
+  flex: 1;
+  text-align: center;
 }
 
 .char-k {
-  margin-right: 0;
+  flex: 1;
+  text-align: right;
 }
 
-/* Cursive Overlapping Signature Shubham (Below K and clear of hand/arm) */
+/* Cursive Overlapping Signature Shubham over K (Matching Screenshot) */
 .rsk-script-signature {
   position: absolute;
-  top: 74%;
-  right: -25px;
+  top: 56%;
+  right: 40px;
   z-index: 9;
   font-family: var(--font-script);
-  font-size: clamp(3rem, 4.4vw, 4.2rem);
+  font-size: clamp(3.2rem, 4.6vw, 4.4rem);
   font-weight: 600;
   color: #2E2721;
-  transform: rotate(-5deg);
+  transform: rotate(-6deg);
   pointer-events: none;
   user-select: none;
 }
@@ -1058,9 +1084,9 @@ body[data-mode="dark"] .rsk-script-signature {
     opacity: 0.75;
   }
 
-  .char-r { margin-left: 0; }
-  .char-s { margin-left: 0; }
-  .char-k { margin-right: 0; }
+  .char-r { flex: 1; text-align: left; }
+  .char-s { flex: 1; text-align: center; }
+  .char-k { flex: 1; text-align: right; }
 
   .rsk-script-signature {
     position: absolute;

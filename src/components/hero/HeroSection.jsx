@@ -110,6 +110,22 @@ export const HeroSection = ({ onOpenResume }) => {
             ------------------------------------------------------------ */}
         <div className="rsk-hero-right-col">
           
+          {/* Dashed Orbit Ring around head and shoulders (Matching Screenshot) */}
+          <div className="rsk-hero-head-ring" aria-hidden="true">
+            <svg viewBox="0 0 500 500" className="dskr-ring-svg">
+              <circle
+                cx="250"
+                cy="250"
+                r="225"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.2"
+                strokeDasharray="4 6"
+                className="ring-dashed"
+              />
+            </svg>
+          </div>
+
           {/* Top-Left Handwritten Doodle with smooth rightward arrow over letter R */}
           <div className="rsk-doodle-wrapper" aria-hidden="true">
             <div className="doodle-text">
