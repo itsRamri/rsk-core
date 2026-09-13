@@ -670,7 +670,7 @@ body[data-mode="dark"] .stats-item:not(:last-child) {
 .rsk-hero-head-ring {
   position: absolute;
   top: 42%;
-  left: 50%;
+  left: calc(50% + 40px);
   transform: translate(-50%, -50%);
   width: 440px;
   height: 440px;
@@ -859,7 +859,7 @@ body[data-mode="dark"] .rsk-script-signature {
   object-position: bottom center;
   display: block;
   filter: contrast(1.03) brightness(0.98);
-  transform: scale(1.06) translateX(28px);
+  transform: scale(1.06) translateX(46px);
   transform-origin: bottom center;
 }
 
@@ -1132,9 +1132,10 @@ body[data-mode="dark"] .rsk-hero-bottom-divider {
     overflow: visible;
   }
 
+  .rsk-hero-head-ring,
   .rsk-hero-bg-rings {
     top: 150px;
-    left: 50%;
+    left: calc(50% + 36px);
     right: auto;
     transform: translate(-50%, -50%);
     width: 320px;
@@ -1215,7 +1216,7 @@ body[data-mode="dark"] .rsk-hero-bottom-divider {
     max-height: 360px !important;
     object-fit: contain !important;
     object-position: bottom center !important;
-    transform: translateX(28px) !important;
+    transform: translateX(44px) !important;
     display: block !important;
     margin: 0 auto !important;
   }
@@ -1423,9 +1424,10 @@ body[data-mode="dark"] .rsk-hero-bottom-divider {
     overflow: visible;
   }
 
+  .rsk-hero-head-ring,
   .rsk-hero-bg-rings {
     top: 120px;
-    left: 50%;
+    left: calc(50% + 30px);
     transform: translate(-50%, -50%);
     width: 260px;
     height: 260px;
@@ -1495,7 +1497,7 @@ body[data-mode="dark"] .rsk-hero-bottom-divider {
     max-height: 310px !important;
     object-fit: contain !important;
     object-position: bottom center !important;
-    transform: translateX(24px) !important;
+    transform: translateX(38px) !important;
     display: block !important;
     margin: 0 auto !important;
   }
