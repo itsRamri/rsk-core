@@ -6,24 +6,6 @@ export const HeroSection = ({ onOpenResume }) => {
   return (
     <section className="rsk-new-hero-section" id="hero">
       
-      {/* ------------------------------------------------------------
-          BACKGROUND LAYERS: Dashed Orbit Ring, Plus Markers
-          ------------------------------------------------------------ */}
-      <div className="rsk-hero-bg-rings" aria-hidden="true">
-        <svg viewBox="0 0 600 600" className="dskr-ring-svg">
-          <circle
-            cx="300"
-            cy="300"
-            r="250"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.2"
-            strokeDasharray="4 6"
-            className="ring-dashed"
-          />
-        </svg>
-      </div>
-
       {/* Decorative Plus Marker */}
       <div className="rsk-plus-marker marker-mid" aria-hidden="true">+</div>
 
@@ -129,22 +111,6 @@ export const HeroSection = ({ onOpenResume }) => {
             ------------------------------------------------------------ */}
         <div className="rsk-hero-right-col">
           
-          {/* Dashed Orbit Ring around the head (Matching Reference) */}
-          <div className="rsk-hero-head-ring" aria-hidden="true">
-            <svg viewBox="0 0 500 500" className="dskr-ring-svg">
-              <circle
-                cx="250"
-                cy="250"
-                r="225"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.3"
-                strokeDasharray="4 6"
-                className="ring-dashed"
-              />
-            </svg>
-          </div>
-
           {/* Top-Left Handwritten Doodle with smooth rightward arrow */}
           <div className="rsk-doodle-wrapper" aria-hidden="true">
             <div className="doodle-text">

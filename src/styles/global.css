@@ -669,24 +669,6 @@ body[data-mode="dark"] .stats-item:not(:last-child) {
   z-index: 6;
 }
 
-/* Dashed Orbit Ring around the head (Matching Reference) */
-.rsk-hero-head-ring {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 480px;
-  height: 480px;
-  z-index: 1;
-  pointer-events: none;
-  color: var(--brand-bronze);
-  opacity: 0.55;
-}
-
-body[data-mode="dark"] .rsk-hero-head-ring {
-  color: rgba(255, 255, 255, 0.35);
-}
-
 /* Top-Left Handwritten Doodle (Shifted more left) */
 .rsk-doodle-wrapper {
   position: absolute;
