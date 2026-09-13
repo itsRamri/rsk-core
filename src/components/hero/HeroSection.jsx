@@ -94,12 +94,11 @@ export const HeroSection = ({ onOpenResume }) => {
               </div>
             </div>
 
-            {/* Stat 4: Scroll Down */}
+            {/* Stat 4: Scroll Down (Compact) */}
             <a href="#about" className="stats-item stats-scroll-item" style={{ textDecoration: 'none' }}>
-              <i className="fa-regular fa-circle-down stat-icon"></i>
+              <i className="fa-regular fa-circle-down stat-scroll-icon"></i>
               <div className="stat-content">
-                <span className="stat-value">SCROLL</span>
-                <span className="stat-label">DOWN &darr;</span>
+                <span className="stat-scroll-text">SCROLL<br />DOWN &darr;</span>
               </div>
             </a>
           </div>
@@ -111,7 +110,7 @@ export const HeroSection = ({ onOpenResume }) => {
             ------------------------------------------------------------ */}
         <div className="rsk-hero-right-col">
           
-          {/* Top-Left Handwritten Doodle with smooth rightward arrow */}
+          {/* Top-Left Handwritten Doodle with smooth rightward arrow over letter R */}
           <div className="rsk-doodle-wrapper" aria-hidden="true">
             <div className="doodle-text">
               <span>App Development</span>
@@ -154,7 +153,7 @@ export const HeroSection = ({ onOpenResume }) => {
             <span className="giant-char char-k">K</span>
           </div>
 
-          {/* Cursive Overlapping Signature Shubham over letter K (Shifted lower) */}
+          {/* Cursive Overlapping Signature Shubham (Lower down, clear of hand/arm) */}
           <div className="rsk-script-signature" aria-hidden="true">
             <span>Shubham</span>
           </div>
@@ -189,35 +188,8 @@ export const HeroSection = ({ onOpenResume }) => {
             />
           </div>
 
-          {/* Tagline directly below photo: • DREAM • DESIGN • DEVELOP */}
-          <div className="rsk-stacked-tagline" aria-hidden="true">
-            <span>• DREAM</span>
-            <span>• DESIGN</span>
-            <span>• DEVELOP</span>
-          </div>
-
         </div>
 
-      </div>
-
-      {/* Hero Bottom Bar with Scroll Down and Status (Matching webskr.in Screenshot) */}
-      <div className="rsk-hero-bottom-footer-bar" aria-hidden="true">
-        <div className="container rsk-hero-footer-inner">
-          <a href="#about" className="hero-scroll-down-link">
-            <span>SCROLL DOWN</span>
-            <i className="fa-solid fa-arrow-down-long"></i>
-          </a>
-          <div className="hero-availability-tag">
-            <span>BASED IN INDIA</span>
-            <span className="dot-sep">•</span>
-            <span>AVAILABLE FOR FREELANCE</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Full Width Dark Line directly below photo and above Biography */}
-      <div className="rsk-hero-full-divider" aria-hidden="true">
-        <div className="full-width-dark-bar"></div>
       </div>
 
     </section>
