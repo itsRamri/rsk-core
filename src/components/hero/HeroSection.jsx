@@ -155,13 +155,6 @@ export const HeroSection = ({ onOpenResume }) => {
             </div>
           </div>
 
-          {/* Top-Right Stacked Tagline (Matching Screenshot with Bullets) */}
-          <div className="rsk-stacked-tagline" aria-hidden="true">
-            <span>• DREAM</span>
-            <span>• DESIGN</span>
-            <span>• DEVELOP</span>
-          </div>
-
           {/* Giant RSK Typography Behind Cutout (S directly behind head) */}
           <div className="rsk-giant-letters-bg" aria-hidden="true">
             <span className="giant-char char-r">R</span>
@@ -204,9 +197,19 @@ export const HeroSection = ({ onOpenResume }) => {
             />
           </div>
 
+          {/* Tagline (Placed below photo on mobile) */}
+          <div className="rsk-stacked-tagline" aria-hidden="true">
+            <span>• DREAM</span>
+            <span>• DESIGN</span>
+            <span>• DEVELOP</span>
+          </div>
+
         </div>
 
       </div>
+
+      {/* Full-Width Divider Line Above Biography */}
+      <div className="rsk-hero-bottom-divider" aria-hidden="true"></div>
 
     </section>
   );
