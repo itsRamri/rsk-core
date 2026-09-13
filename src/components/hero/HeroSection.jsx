@@ -56,7 +56,7 @@ export const HeroSection = ({ onOpenResume }) => {
             </a>
           </div>
 
-          {/* Bottom Left Stats Bar (Matching Screenshot) */}
+          {/* Left Stats Bar (3 Items matching webskr.in) */}
           <div className="rsk-hero-stats-bar">
             {/* Stat 1: Projects */}
             <div className="stats-item">
@@ -93,14 +93,6 @@ export const HeroSection = ({ onOpenResume }) => {
                 <span className="stat-label">AVAILABLE</span>
               </div>
             </div>
-
-            {/* Stat 4: Scroll Down (Compact) */}
-            <a href="#about" className="stats-item stats-scroll-item" style={{ textDecoration: 'none' }}>
-              <i className="fa-regular fa-circle-down stat-scroll-icon"></i>
-              <div className="stat-content">
-                <span className="stat-scroll-text">SCROLL<br />DOWN &darr;</span>
-              </div>
-            </a>
           </div>
 
         </div>
@@ -197,7 +189,7 @@ export const HeroSection = ({ onOpenResume }) => {
             />
           </div>
 
-          {/* Tagline (Placed below photo on mobile) */}
+          {/* Tagline (Placed top-right on desktop, below photo on mobile) */}
           <div className="rsk-stacked-tagline" aria-hidden="true">
             <span>• DREAM</span>
             <span>• DESIGN</span>
@@ -208,7 +200,25 @@ export const HeroSection = ({ onOpenResume }) => {
 
       </div>
 
-      {/* Full-Width Divider Line Above Biography */}
+      {/* Desktop Full-Width Bottom Bar (Matching webskr.in Screenshot) */}
+      <div className="rsk-hero-bottom-bar" aria-hidden="true">
+        <div className="container rsk-bottom-bar-container">
+          <a href="#about" className="rsk-bottom-scroll-link">
+            <span>SCROLL DOWN</span>
+            <span className="scroll-arrow">&darr;</span>
+          </a>
+          <div className="rsk-bottom-meta-group">
+            <span className="bottom-meta-item">BASED IN INDIA</span>
+            <span className="bottom-meta-dash">—</span>
+            <span className="bottom-meta-item">AVAILABLE FOR PROJECTS</span>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="rsk-bottom-social-btn" aria-label="Instagram">
+              <i className="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Full-Width Divider Line Above Biography */}
       <div className="rsk-hero-bottom-divider" aria-hidden="true"></div>
 
     </section>
