@@ -189,15 +189,35 @@ export const HeroSection = ({ onOpenResume }) => {
             />
           </div>
 
+          {/* Tagline directly below photo: • DREAM • DESIGN • DEVELOP */}
+          <div className="rsk-stacked-tagline" aria-hidden="true">
+            <span>• DREAM</span>
+            <span>• DESIGN</span>
+            <span>• DEVELOP</span>
+          </div>
+
         </div>
 
       </div>
 
-      {/* Horizontal Divider Line above Biography / About Section */}
-      <div className="rsk-hero-bottom-divider" aria-hidden="true">
-        <div className="container">
-          <div className="hero-divider-bar"></div>
+      {/* Hero Bottom Bar with Scroll Down and Status (Matching webskr.in Screenshot) */}
+      <div className="rsk-hero-bottom-footer-bar" aria-hidden="true">
+        <div className="container rsk-hero-footer-inner">
+          <a href="#about" className="hero-scroll-down-link">
+            <span>SCROLL DOWN</span>
+            <i className="fa-solid fa-arrow-down-long"></i>
+          </a>
+          <div className="hero-availability-tag">
+            <span>BASED IN INDIA</span>
+            <span className="dot-sep">•</span>
+            <span>AVAILABLE FOR FREELANCE</span>
+          </div>
         </div>
+      </div>
+
+      {/* Full Width Dark Line directly below photo and above Biography */}
+      <div className="rsk-hero-full-divider" aria-hidden="true">
+        <div className="full-width-dark-bar"></div>
       </div>
 
     </section>

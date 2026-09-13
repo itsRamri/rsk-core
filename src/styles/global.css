@@ -707,24 +707,26 @@ body[data-mode="dark"] .doodle-text {
   height: 100%;
 }
 
-/* Top-Right Stacked Tagline (Matching IDEAS INTO REALITY) */
+/* Tagline directly below photo */
 .rsk-stacked-tagline {
-  position: absolute;
-  top: 9%;
-  right: 4%;
+  position: relative;
   z-index: 12;
   display: flex;
-  flex-direction: column;
-  text-align: right;
-  font-size: 0.76rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
   font-weight: 800;
-  letter-spacing: 0.26em;
-  line-height: 1.45;
+  letter-spacing: 0.22em;
+  line-height: 1.5;
   color: #4A423B;
   pointer-events: none;
   user-select: none;
-  width: auto;
-  margin: 0;
+  margin-top: 0.9rem;
+  margin-bottom: 0.3rem;
+  width: 100%;
 }
 
 body[data-mode="dark"] .rsk-stacked-tagline {
@@ -840,24 +842,72 @@ body[data-mode="dark"] .rsk-script-signature {
   transform-origin: bottom center;
 }
 
-/* Bottom Divider Line Above Biography / About Section */
-.rsk-hero-bottom-divider {
+/* Hero Bottom Footer Bar (Scroll Down & Status) */
+.rsk-hero-bottom-footer-bar {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  margin-top: 1.5rem;
+  padding-bottom: 0.6rem;
+}
+
+.rsk-hero-footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-scroll-down-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  color: var(--text-heading);
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hero-scroll-down-link:hover {
+  transform: translateY(2px);
+  opacity: 0.8;
+}
+
+.hero-availability-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.74rem;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  color: var(--text-heading);
+  opacity: 0.9;
+}
+
+.dot-sep {
+  color: var(--brand-bronze);
+  font-size: 0.9rem;
+}
+
+/* Full Width Dark Horizontal Line Directly Above Biography */
+.rsk-hero-full-divider {
   width: 100%;
   position: relative;
   z-index: 10;
   padding: 0;
-  margin-top: auto;
+  margin-top: 0.4rem;
 }
 
-.hero-divider-bar {
+.full-width-dark-bar {
   width: 100%;
   height: 1.5px;
-  background: linear-gradient(90deg, transparent 0%, rgba(120, 107, 90, 0.4) 20%, rgba(120, 107, 90, 0.4) 80%, transparent 100%);
-  opacity: 0.85;
+  background: rgba(46, 39, 33, 0.45);
 }
 
-body[data-mode="dark"] .hero-divider-bar {
-  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.18) 20%, rgba(255, 255, 255, 0.18) 80%, transparent 100%);
+body[data-mode="dark"] .full-width-dark-bar {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* ==========================================================================
