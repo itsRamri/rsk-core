@@ -149,13 +149,6 @@ export const HeroSection = ({ onOpenResume }) => {
             </div>
           </div>
 
-          {/* Top-Right Stacked Tagline with Bullets (• DREAM • DESIGN • DEVELOP) */}
-          <div className="rsk-stacked-tagline" aria-hidden="true">
-            <span>• DREAM</span>
-            <span>• DESIGN</span>
-            <span>• DEVELOP</span>
-          </div>
-
           {/* Giant RSK Typography Behind Cutout */}
           <div className="rsk-giant-letters-bg" aria-hidden="true">
             <span className="giant-char char-r">R</span>
@@ -196,6 +189,13 @@ export const HeroSection = ({ onOpenResume }) => {
               onLoad={() => setPortraitLoaded(true)}
               loading="eager"
             />
+          </div>
+
+          {/* Tagline directly below photo: • DREAM • DESIGN • DEVELOP */}
+          <div className="rsk-stacked-tagline" aria-hidden="true">
+            <span>• DREAM</span>
+            <span>• DESIGN</span>
+            <span>• DEVELOP</span>
           </div>
 
         </div>
