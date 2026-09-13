@@ -669,11 +669,29 @@ body[data-mode="dark"] .stats-item:not(:last-child) {
   z-index: 6;
 }
 
-/* Top-Left Handwritten Doodle */
+/* Dashed Orbit Ring around the head (Matching Reference) */
+.rsk-hero-head-ring {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  height: 480px;
+  z-index: 1;
+  pointer-events: none;
+  color: var(--brand-bronze);
+  opacity: 0.55;
+}
+
+body[data-mode="dark"] .rsk-hero-head-ring {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* Top-Left Handwritten Doodle (Shifted more left) */
 .rsk-doodle-wrapper {
   position: absolute;
-  top: 10%;
-  left: 6%;
+  top: 6%;
+  left: -2%;
   z-index: 12;
   pointer-events: none;
   user-select: none;
@@ -707,44 +725,42 @@ body[data-mode="dark"] .doodle-text {
   height: 100%;
 }
 
-/* Tagline directly below photo */
+/* Top-Right Stacked Tagline (Matching IDEAS INTO REALITY) */
 .rsk-stacked-tagline {
-  position: relative;
+  position: absolute;
+  top: 9%;
+  right: 4%;
   z-index: 12;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  text-align: center;
-  font-size: 0.78rem;
+  flex-direction: column;
+  text-align: right;
+  font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.22em;
-  line-height: 1.5;
+  letter-spacing: 0.26em;
+  line-height: 1.45;
   color: #4A423B;
   pointer-events: none;
   user-select: none;
-  margin-top: 0.8rem;
-  margin-bottom: 0.2rem;
-  width: 100%;
+  width: auto;
+  margin: 0;
 }
 
 body[data-mode="dark"] .rsk-stacked-tagline {
   color: #C4B8A9;
 }
 
-/* Giant RSK Typography Behind Cutout (Centered and Non-Clipped) */
+/* Giant RSK Typography Behind Cutout (Centered and Non-Clipped, S behind head) */
 .rsk-giant-letters-bg {
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 560px;
+  max-width: 580px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   z-index: 2;
   pointer-events: none;
   user-select: none;
@@ -767,17 +783,17 @@ body[data-mode="dark"] .rsk-stacked-tagline {
 }
 
 .char-s {
-  margin-left: 0;
+  margin: 0 auto;
 }
 
 .char-k {
   margin-right: 0;
 }
 
-/* Cursive Overlapping Signature Shubham over K (Shifted more to right) */
+/* Cursive Overlapping Signature Shubham over K (Shifted lower) */
 .rsk-script-signature {
   position: absolute;
-  top: 52%;
+  top: 66%;
   right: -1%;
   z-index: 9;
   font-family: var(--font-script);

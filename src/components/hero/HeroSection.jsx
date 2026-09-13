@@ -120,7 +120,23 @@ export const HeroSection = ({ onOpenResume }) => {
             ------------------------------------------------------------ */}
         <div className="rsk-hero-right-col">
           
-          {/* Top-Left Handwritten Doodle with smooth rightward arrow */}
+          {/* Dashed Orbit Ring around the head (Matching Reference) */}
+          <div className="rsk-hero-head-ring" aria-hidden="true">
+            <svg viewBox="0 0 500 500" className="dskr-ring-svg">
+              <circle
+                cx="250"
+                cy="250"
+                r="225"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.3"
+                strokeDasharray="4 6"
+                className="ring-dashed"
+              />
+            </svg>
+          </div>
+
+          {/* Top-Left Handwritten Doodle with smooth rightward arrow (Shifted more left) */}
           <div className="rsk-doodle-wrapper" aria-hidden="true">
             <div className="doodle-text">
               <span>App Development</span>
@@ -149,14 +165,21 @@ export const HeroSection = ({ onOpenResume }) => {
             </div>
           </div>
 
-          {/* Giant RSK Typography Behind Cutout */}
+          {/* Top-Right Stacked Tagline (Matching IDEAS INTO REALITY in Screenshot) */}
+          <div className="rsk-stacked-tagline" aria-hidden="true">
+            <span>DREAM</span>
+            <span>DESIGN</span>
+            <span>DEVELOP</span>
+          </div>
+
+          {/* Giant RSK Typography Behind Cutout (S directly behind head) */}
           <div className="rsk-giant-letters-bg" aria-hidden="true">
             <span className="giant-char char-r">R</span>
             <span className="giant-char char-s">S</span>
             <span className="giant-char char-k">K</span>
           </div>
 
-          {/* Cursive Overlapping Signature Shubham over letter K */}
+          {/* Cursive Overlapping Signature Shubham over letter K (Shifted lower) */}
           <div className="rsk-script-signature" aria-hidden="true">
             <span>Shubham</span>
           </div>
@@ -180,7 +203,7 @@ export const HeroSection = ({ onOpenResume }) => {
             </svg>
           </div>
 
-          {/* Cutout Portrait Image Stage */}
+          {/* Cutout Portrait Image Stage (Centered directly over S) */}
           <div className={`rsk-cutout-container ${portraitLoaded ? 'loaded' : ''}`}>
             <img
               src="/ezgif-476a1f2348609364-jpg/shubham-cutout.png"
@@ -191,12 +214,7 @@ export const HeroSection = ({ onOpenResume }) => {
             />
           </div>
 
-          {/* Tagline directly below photo: • DREAM • DESIGN • DEVELOP */}
-          <div className="rsk-stacked-tagline" aria-hidden="true">
-            <span>• DREAM</span>
-            <span>• DESIGN</span>
-            <span>• DEVELOP</span>
-          </div>
+        </div>
 
         </div>
 
