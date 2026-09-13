@@ -54,7 +54,7 @@ export const HeroSection = ({ onOpenResume }) => {
 
           {/* Bio Description */}
           <p className="rsk-hero-bio">
-            I build electronic systems, digital experiences and<br className="desktop-br" />
+            I build electronic systems, digital experiences and <br className="desktop-br" />
             technology-driven solutions.
           </p>
 
