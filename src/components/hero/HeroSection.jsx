@@ -87,7 +87,16 @@ export const HeroSection = ({ onOpenResume }) => {
 
             {/* Stat 2: ECE */}
             <div className="stats-item">
-              <span className="stat-icon-signal">((•))</span>
+              <span className="stat-icon-antenna" aria-hidden="true">
+                <svg viewBox="0 0 24 24" className="antenna-svg">
+                  <circle cx="12" cy="7.5" r="1.8" fill="currentColor" />
+                  <line x1="12" y1="9.3" x2="12" y2="20" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+                  <path d="M 8.5 4.5 C 7 6 7 9 8.5 10.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+                  <path d="M 5.8 2.5 C 3.2 5.5 3.2 10.5 5.8 13.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+                  <path d="M 15.5 4.5 C 17 6 17 9 15.5 10.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+                  <path d="M 18.2 2.5 C 20.8 5.5 20.8 10.5 18.2 13.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+                </svg>
+              </span>
               <div className="stat-content">
                 <span className="stat-value">ECE</span>
                 <span className="stat-label">ENGINEERING</span>

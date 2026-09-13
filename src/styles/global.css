@@ -617,13 +617,20 @@ body[data-mode="dark"] .stats-item:not(:last-child) {
   line-height: 1;
 }
 
-.stat-icon-signal {
-  font-size: 0.95rem;
-  font-weight: 800;
+.stat-icon-antenna {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--text-heading);
-  letter-spacing: -1px;
   line-height: 1;
-  display: inline-block;
+  width: 22px;
+  height: 22px;
+}
+
+.antenna-svg {
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
 .stat-content {
@@ -1194,8 +1201,14 @@ body[data-mode="dark"] .hero-divider-bar {
     font-size: 1rem;
   }
 
-  .stat-icon-signal {
-    font-size: 0.9rem;
+  .stat-icon-antenna {
+    width: 20px;
+    height: 20px;
+  }
+
+  .antenna-svg {
+    width: 18px;
+    height: 18px;
   }
 
   .stat-value {
