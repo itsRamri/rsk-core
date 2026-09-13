@@ -111,6 +111,15 @@ export const HeroSection = ({ onOpenResume }) => {
                 <span className="stat-label">AVAILABLE</span>
               </div>
             </div>
+
+            {/* Stat 4: Scroll Down */}
+            <a href="#about" className="stats-item stats-scroll-item" style={{ textDecoration: 'none' }}>
+              <i className="fa-regular fa-circle-down stat-icon"></i>
+              <div className="stat-content">
+                <span className="stat-value">SCROLL</span>
+                <span className="stat-label">DOWN &darr;</span>
+              </div>
+            </a>
           </div>
 
         </div>
@@ -136,7 +145,7 @@ export const HeroSection = ({ onOpenResume }) => {
             </svg>
           </div>
 
-          {/* Top-Left Handwritten Doodle with smooth rightward arrow (Shifted more left) */}
+          {/* Top-Left Handwritten Doodle with smooth rightward arrow */}
           <div className="rsk-doodle-wrapper" aria-hidden="true">
             <div className="doodle-text">
               <span>App Development</span>
@@ -165,11 +174,11 @@ export const HeroSection = ({ onOpenResume }) => {
             </div>
           </div>
 
-          {/* Top-Right Stacked Tagline (Matching IDEAS INTO REALITY in Screenshot) */}
+          {/* Top-Right Stacked Tagline (Matching Screenshot with Bullets) */}
           <div className="rsk-stacked-tagline" aria-hidden="true">
-            <span>DREAM</span>
-            <span>DESIGN</span>
-            <span>DEVELOP</span>
+            <span>• DREAM</span>
+            <span>• DESIGN</span>
+            <span>• DEVELOP</span>
           </div>
 
           {/* Giant RSK Typography Behind Cutout (S directly behind head) */}
@@ -213,8 +222,6 @@ export const HeroSection = ({ onOpenResume }) => {
               loading="eager"
             />
           </div>
-
-        </div>
 
         </div>
 

@@ -585,11 +585,11 @@ body[data-mode="dark"] .rsk-theme-toggle-btn {
 .rsk-hero-stats-bar {
   display: flex;
   align-items: center;
-  gap: clamp(1.5rem, 2.5vw, 2.8rem);
+  gap: clamp(1rem, 1.8vw, 2.2rem);
   padding-top: 1.4rem;
   border-top: 1.2px solid rgba(120, 107, 90, 0.25);
   width: 100%;
-  max-width: 500px;
+  max-width: 580px;
 }
 
 body[data-mode="dark"] .rsk-hero-stats-bar {
