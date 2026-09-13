@@ -868,7 +868,7 @@ body[data-mode="dark"] .rsk-script-signature {
   object-position: bottom center;
   display: block;
   filter: contrast(1.03) brightness(0.98);
-  transform: scale(1.06);
+  transform: scale(1.06) translateX(12px);
   transform-origin: bottom center;
 }
 
@@ -1140,7 +1140,7 @@ body[data-mode="dark"] .rsk-hero-bottom-divider {
     max-height: 360px !important;
     object-fit: contain !important;
     object-position: bottom center !important;
-    transform: none !important;
+    transform: translateX(14px) !important;
     display: block !important;
     margin: 0 auto !important;
   }
@@ -1387,7 +1387,7 @@ body[data-mode="dark"] .rsk-hero-bottom-divider {
     max-height: 310px !important;
     object-fit: contain !important;
     object-position: bottom center !important;
-    transform: none !important;
+    transform: translateX(12px) !important;
     display: block !important;
     margin: 0 auto !important;
   }
