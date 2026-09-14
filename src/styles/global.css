@@ -692,11 +692,11 @@ body[data-mode="dark"] .stats-item:not(:last-child) {
   z-index: 6;
 }
 
-/* Dashed Orbit Ring around the head (Matching Screenshot) */
+/* Dashed Orbit Ring around the head (Centered on Photo) */
 .rsk-hero-head-ring {
   position: absolute;
-  top: 42%;
-  left: 50%;
+  top: 40%;
+  left: calc(50% + 62px);
   transform: translate(-50%, -50%);
   width: 440px;
   height: 440px;
@@ -772,14 +772,14 @@ body[data-mode="dark"] .rsk-stacked-tagline {
   color: #C4B8A9;
 }
 
-/* Giant RSK Typography Behind Cutout (Centered and Non-Clipped, S behind head) */
+/* Giant RSK Typography Behind Cutout (Reduced width and centered behind photo) */
 .rsk-giant-letters-bg {
   position: absolute;
   top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 580px;
+  max-width: 480px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -792,7 +792,7 @@ body[data-mode="dark"] .rsk-stacked-tagline {
 
 .giant-char {
   font-family: var(--font-display);
-  font-size: clamp(9.5rem, 14vw, 16.5rem);
+  font-size: clamp(8rem, 11.5vw, 13.5rem);
   font-weight: 900;
   line-height: 0.8;
   letter-spacing: -0.04em;
@@ -885,7 +885,7 @@ body[data-mode="dark"] .rsk-script-signature {
   object-position: bottom center;
   display: block;
   filter: contrast(1.03) brightness(0.98);
-  transform: scale(1.06) translateX(18px);
+  transform: scale(1.06) translateX(62px);
   transform-origin: bottom center;
 }
 
@@ -1114,13 +1114,20 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
     margin-left: 1.2rem;
   }
 
+  .rsk-hero-head-ring {
+    top: 130px;
+    left: calc(50% + 38px);
+    width: 320px;
+    height: 320px;
+  }
+
   .rsk-giant-letters-bg {
     position: absolute;
     top: 140px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 380px;
+    max-width: 330px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1169,7 +1176,7 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
     max-height: 360px !important;
     object-fit: contain !important;
     object-position: bottom center !important;
-    transform: translateX(14px) !important;
+    transform: translateX(38px) !important;
     display: block !important;
     margin: 0 auto !important;
   }

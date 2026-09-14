@@ -116,29 +116,27 @@ export const HeroSection = ({ onOpenResume }) => {
             ------------------------------------------------------------ */}
         <div className="rsk-hero-right-col">
 
-          {/* Dual Concentric Dashed Orbit Rings (from neck around head) */}
+          {/* Dual Concentric Dashed Orbit Arcs (Arching above head, completely clear of RSK letters) */}
           <div className="rsk-hero-head-ring" aria-hidden="true">
             <svg viewBox="0 0 500 500" className="dskr-ring-svg">
-              {/* Inner Circle */}
-              <circle
-                cx="250"
-                cy="235"
-                r="150"
+              {/* Inner Arc */}
+              <path
+                d="M 112 195 A 150 150 0 0 1 388 195"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="1.2"
+                strokeWidth="1.3"
                 strokeDasharray="4 6"
+                strokeLinecap="round"
                 className="ring-dashed-inner"
               />
-              {/* Outer Circle (slightly larger) */}
-              <circle
-                cx="250"
-                cy="235"
-                r="215"
+              {/* Outer Arc (slightly larger) */}
+              <path
+                d="M 52 172 A 215 215 0 0 1 448 172"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="1.2"
+                strokeWidth="1.3"
                 strokeDasharray="4 6"
+                strokeLinecap="round"
                 className="ring-dashed-outer"
               />
             </svg>
@@ -241,13 +239,7 @@ export const HeroSection = ({ onOpenResume }) => {
 
       </div>
 
-      {/* Centered Biography Pill / Tab at Bottom Edge */}
-      <div className="rsk-hero-bio-tab-wrapper">
-        <a href="#about" className="rsk-hero-bio-tab">
-          <i className="fa-regular fa-id-card"></i>
-          <span>BIOGRAPHY</span>
-        </a>
-      </div>
+      {/* Centered Biography Pill / Tab removed per user request */}
 
     </section>
   );
