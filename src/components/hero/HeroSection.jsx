@@ -56,7 +56,7 @@ export const HeroSection = ({ onOpenResume }) => {
             </a>
           </div>
 
-          {/* Left Stats Bar (3 Items matching webskr.in) */}
+          {/* Left Stats Bar (4 Items matching reference photo) */}
           <div className="rsk-hero-stats-bar">
             {/* Stat 1: Projects */}
             <div className="stats-item">
@@ -93,6 +93,20 @@ export const HeroSection = ({ onOpenResume }) => {
                 <span className="stat-label">AVAILABLE</span>
               </div>
             </div>
+
+            {/* Stat 4: Scroll Down */}
+            <a href="#about" className="stats-item stat-scroll-link">
+              <span className="stat-icon-scroll" aria-hidden="true">
+                <svg viewBox="0 0 24 24" className="split-circle-svg" fill="none" stroke="currentColor" strokeWidth="2.2">
+                  <circle cx="12" cy="12" r="9.5" stroke="currentColor" strokeWidth="2" />
+                  <line x1="12" y1="2.5" x2="12" y2="21.5" stroke="currentColor" strokeWidth="2" />
+                </svg>
+              </span>
+              <div className="stat-content">
+                <span className="stat-value">SCROLL</span>
+                <span className="stat-label">DOWN &darr;</span>
+              </div>
+            </a>
           </div>
 
         </div>
@@ -101,19 +115,31 @@ export const HeroSection = ({ onOpenResume }) => {
             RIGHT COLUMN: Giant RSK, Doodle, Tagline, PCB Traces, Photo
             ------------------------------------------------------------ */}
         <div className="rsk-hero-right-col">
-          
-          {/* Dashed Orbit Ring around head and shoulders (Matching Screenshot) */}
+
+          {/* Dual Concentric Dashed Orbit Rings (from neck around head) */}
           <div className="rsk-hero-head-ring" aria-hidden="true">
             <svg viewBox="0 0 500 500" className="dskr-ring-svg">
+              {/* Inner Circle */}
               <circle
                 cx="250"
-                cy="250"
-                r="225"
+                cy="235"
+                r="150"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.2"
                 strokeDasharray="4 6"
-                className="ring-dashed"
+                className="ring-dashed-inner"
+              />
+              {/* Outer Circle (slightly larger) */}
+              <circle
+                cx="250"
+                cy="235"
+                r="215"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.2"
+                strokeDasharray="4 6"
+                className="ring-dashed-outer"
               />
             </svg>
           </div>
@@ -159,22 +185,37 @@ export const HeroSection = ({ onOpenResume }) => {
             <span>Shubham</span>
           </div>
 
-          {/* PCB Circuit Traces Graphic (Bottom-Right behind arm) */}
+          {/* PCB Circuit Traces Graphic (Exact Image 3 Reference Match) */}
           <div className="rsk-pcb-traces-svg" aria-hidden="true">
-            <svg viewBox="0 0 260 200" className="pcb-svg">
-              <circle cx="20" cy="140" r="3.5" fill="#786B5A" />
-              <line x1="20" y1="140" x2="70" y2="140" stroke="#786B5A" strokeWidth="1.5" />
-              <line x1="70" y1="140" x2="110" y2="100" stroke="#786B5A" strokeWidth="1.5" />
-              <circle cx="110" cy="100" r="3.5" fill="#786B5A" />
-              <line x1="110" y1="100" x2="170" y2="100" stroke="#786B5A" strokeWidth="1.5" />
-              <line x1="170" y1="100" x2="210" y2="60" stroke="#786B5A" strokeWidth="1.5" />
-              <circle cx="210" cy="60" r="3.5" fill="#786B5A" />
-              <line x1="210" y1="60" x2="250" y2="60" stroke="#786B5A" strokeWidth="1.5" />
+            <svg viewBox="0 0 260 300" className="pcb-svg" fill="none">
+              {/* Top vertical stem with dot */}
+              <circle cx="230" cy="22" r="3.5" fill="#786B5A" />
+              <line x1="230" y1="22" x2="230" y2="100" stroke="#786B5A" strokeWidth="1.6" strokeLinecap="round" />
               
-              <line x1="130" y1="100" x2="160" y2="130" stroke="#786B5A" strokeWidth="1.2" strokeDasharray="3 3" />
-              <circle cx="160" cy="130" r="2.5" fill="#786B5A" />
-              <line x1="160" y1="130" x2="220" y2="130" stroke="#786B5A" strokeWidth="1.2" />
-              <circle cx="220" cy="130" r="2.5" fill="#786B5A" />
+              {/* 45° diagonal segment from vertical stem to main junction */}
+              <line x1="230" y1="100" x2="160" y2="170" stroke="#786B5A" strokeWidth="1.6" strokeLinecap="round" />
+
+              {/* Parallel double track on upper-right of diagonal */}
+              <line x1="202" y1="132" x2="168" y2="166" stroke="#786B5A" strokeWidth="1.4" strokeLinecap="round" />
+              <circle cx="202" cy="132" r="3.5" fill="#786B5A" />
+
+              {/* Horizontal spur to the left */}
+              <line x1="160" y1="170" x2="85" y2="170" stroke="#786B5A" strokeWidth="1.6" strokeLinecap="round" />
+
+              {/* Central junction dot */}
+              <circle cx="160" cy="170" r="3.5" fill="#786B5A" />
+
+              {/* Branch 1 (diagonal -> horizontal -> diagonal) */}
+              <line x1="160" y1="170" x2="110" y2="220" stroke="#786B5A" strokeWidth="1.6" strokeLinecap="round" />
+              <line x1="110" y1="220" x2="38" y2="220" stroke="#786B5A" strokeWidth="1.6" strokeLinecap="round" />
+              <circle cx="38" cy="220" r="3.5" fill="#786B5A" />
+              <line x1="38" y1="220" x2="10" y2="248" stroke="#786B5A" strokeWidth="1.6" strokeLinecap="round" />
+              <circle cx="10" cy="248" r="3.5" fill="#786B5A" />
+
+              {/* Branch 2 (vertical down -> diagonal) */}
+              <line x1="160" y1="170" x2="160" y2="230" stroke="#786B5A" strokeWidth="1.6" strokeLinecap="round" />
+              <line x1="160" y1="230" x2="115" y2="275" stroke="#786B5A" strokeWidth="1.6" strokeLinecap="round" />
+              <circle cx="115" cy="275" r="3.5" fill="#786B5A" />
             </svg>
           </div>
 
@@ -200,26 +241,13 @@ export const HeroSection = ({ onOpenResume }) => {
 
       </div>
 
-      {/* Desktop Full-Width Bottom Bar (Matching webskr.in Screenshot) */}
-      <div className="rsk-hero-bottom-bar" aria-hidden="true">
-        <div className="container rsk-bottom-bar-container">
-          <a href="#about" className="rsk-bottom-scroll-link">
-            <span>SCROLL DOWN</span>
-            <span className="scroll-arrow">&darr;</span>
-          </a>
-          <div className="rsk-bottom-meta-group">
-            <span className="bottom-meta-item">BASED IN INDIA</span>
-            <span className="bottom-meta-dash">—</span>
-            <span className="bottom-meta-item">AVAILABLE FOR PROJECTS</span>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="rsk-bottom-social-btn" aria-label="Instagram">
-              <i className="fa-brands fa-instagram"></i>
-            </a>
-          </div>
-        </div>
+      {/* Centered Biography Pill / Tab at Bottom Edge */}
+      <div className="rsk-hero-bio-tab-wrapper">
+        <a href="#about" className="rsk-hero-bio-tab">
+          <i className="fa-regular fa-id-card"></i>
+          <span>BIOGRAPHY</span>
+        </a>
       </div>
-
-      {/* Mobile Full-Width Divider Line Above Biography */}
-      <div className="rsk-hero-bottom-divider" aria-hidden="true"></div>
 
     </section>
   );
