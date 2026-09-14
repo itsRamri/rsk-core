@@ -1142,8 +1142,8 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
   .rsk-script-signature {
     position: absolute;
     top: 155px;
-    right: -5px;
-    font-size: clamp(2rem, 5.2vw, 2.5rem);
+    right: 8px;
+    font-size: clamp(1.8rem, 4.8vw, 2.3rem);
     z-index: 10;
   }
 
@@ -1419,9 +1419,9 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
   }
 
   .rsk-script-signature {
-    font-size: 1.85rem;
+    font-size: 1.7rem;
     top: 155px;
-    right: -8px;
+    right: 10px;
     z-index: 10;
   }
 
