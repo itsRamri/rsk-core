@@ -706,7 +706,7 @@ body[data-mode="dark"] .stats-item:not(:last-child) {
 .rsk-hero-head-ring {
   position: absolute;
   top: 40%;
-  left: calc(50% + 24px);
+  left: calc(50% + 38px);
   transform: translate(-50%, -50%);
   width: 440px;
   height: 440px;
@@ -786,7 +786,7 @@ body[data-mode="dark"] .rsk-stacked-tagline {
 .rsk-giant-letters-bg {
   position: absolute;
   top: 46%;
-  left: calc(50% + 24px);
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 480px;
@@ -835,7 +835,7 @@ body[data-mode="dark"] .giant-char {
 .rsk-script-signature {
   position: absolute;
   top: 59%;
-  right: -12px;
+  right: -10px;
   z-index: 9;
   font-family: var(--font-script);
   font-size: clamp(2.3rem, 3.4vw, 3.2rem);
@@ -878,7 +878,7 @@ body[data-mode="dark"] .rsk-script-signature {
   object-position: bottom center;
   display: block;
   filter: contrast(1.03) brightness(0.98);
-  transform: scale(1.06) translateX(24px);
+  transform: scale(1.06) translateX(38px);
   transform-origin: bottom center;
 }
 
