@@ -46,6 +46,47 @@ export const ProjectModal = ({ project, isOpen, onClose }) => {
             </ul>
           </div>
 
+          {/* Engineering Schematics & CAD Proof */}
+          {project.images && project.images.length > 0 && (
+            <div style={{ marginBottom: '1.4rem' }}>
+              <h4 style={{ fontSize: '1rem', color: '#ffffff', marginBottom: '0.6rem' }}>
+                <i className="fa-solid fa-images highlight"></i> Schematic Captures & CAD Proof (OrCAD CIS 17.2)
+              </h4>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '0.8rem' }}>
+                {project.images.map((imgSrc, idx) => (
+                  <a
+                    key={idx}
+                    href={imgSrc}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'block',
+                      borderRadius: '8px',
+                      overflow: 'hidden',
+                      border: '1px solid rgba(255,255,255,0.18)',
+                      background: '#ffffff',
+                      textDecoration: 'none'
+                    }}
+                    title="Click to view full high-res schematic"
+                  >
+                    <img
+                      src={imgSrc}
+                      alt={`${project.title} Schematic ${idx + 1}`}
+                      style={{
+                        width: '100%',
+                        height: '160px',
+                        objectFit: 'contain',
+                        display: 'block',
+                        padding: '6px',
+                        background: '#ffffff'
+                      }}
+                    />
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div style={{ marginBottom: '1.5rem' }}>
             <h4 style={{ fontSize: '1rem', color: '#ffffff', marginBottom: '0.5rem' }}>
               <i className="fa-solid fa-circle-info highlight"></i> Project Overview & Engineering Rationale

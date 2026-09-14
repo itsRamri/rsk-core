@@ -8,18 +8,23 @@ export const projectsData = [
     id: 'p1',
     category: 'pcb',
     categoryLabel: 'PCB Design & EDA',
-    title: 'Custom Microcontroller & Power Carrier Board',
+    title: 'IC 555 Board',
     subtitle: 'Schematic Capture & PCB Layout in Cadence OrCAD Capture CIS 17.2',
-    description: 'Designed and laid out a custom 2-layer microcontroller development PCB using Cadence OrCAD Capture CIS 17.2. Created complete component schematic symbols, footprints, power traces, ground copper pour, and generated fabrication-ready Gerber RS-274X and drill files with zero Design Rule Check (DRC) violations.',
-    architecture: 'Schematic Capture (OrCAD CIS 17.2) -> Footprint Mapping -> PCB Routing -> DRC Verification -> Gerber Export',
+    description: 'Designed and laid out an IC 555 timer and LED array circuit PCB using Cadence OrCAD Capture CIS 17.2. Created complete component schematic symbols, footprints, power traces, and generated fabrication-ready Gerber RS-274X and drill files with zero Design Rule Check (DRC) violations.',
+    architecture: 'Power Header (VCC/GND) -> NE555 Timer Stage -> LED Array -> Cadence OrCAD CIS 17.2 Verification',
     specs: [
       'EDA Software: Cadence OrCAD Capture CIS (Version 17.2)',
-      'Layer Stackup: 2-Layer FR-4 with bottom solid ground copper pour',
-      'Power Stage: LM7805 & AMS1117 Linear Regulators (5V & 3.3V Rails) with decoupling capacitors',
+      'Timer Stage: NE555 IC with timing resistor/capacitor network',
+      'Output Stage: Multi-channel LED array with current-limiting resistors',
+      'Power Header: 2-pin polarized connector (VCC/GND)',
       'Manufacturing Outputs: Gerber RS-274X files, Excellon Drill files & Bill of Materials (BOM)'
     ],
-    tags: ['OrCAD Capture CIS 17.2', 'PCB Layout', 'Schematic Capture', 'Gerber RS-274X', 'DRC'],
+    tags: ['OrCAD Capture CIS 17.2', 'IC 555 Timer', 'PCB Layout', 'Schematic Capture', 'DRC'],
     icon: 'fa-solid fa-layer-group',
+    images: [
+      '/PCB/schematic/Screenshot 2025-11-18 174725.png',
+      '/PCB/schematic/Screenshot 2025-11-18 174557.png'
+    ],
     github: 'https://github.com',
     live: '#projects'
   },
