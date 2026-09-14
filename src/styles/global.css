@@ -1299,20 +1299,23 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
   }
 
   .rsk-hero-stats-bar {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.9rem 1.2rem;
-    padding-top: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.35rem;
+    padding-top: 1.1rem;
     border-top: 1.2px solid rgba(120, 107, 90, 0.28);
     width: 100%;
     margin: 0 0 1.2rem 0;
   }
 
   .stats-item {
-    gap: 0.6rem;
-    padding: 0;
-    border-right: none !important;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    flex: 1;
     justify-content: flex-start;
+    padding: 0 0.5rem;
   }
 
   .stats-item:first-child {
@@ -1320,40 +1323,40 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
   }
 
   .stats-item:not(:last-child) {
-    border-right: none;
+    border-right: 1.2px solid rgba(120, 107, 90, 0.25);
   }
 
   body[data-mode="dark"] .stats-item:not(:last-child) {
-    border-right-color: transparent;
+    border-right-color: rgba(255, 255, 255, 0.15);
   }
 
   .stat-icon {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .stat-icon-antenna {
-    width: 20px;
-    height: 20px;
-  }
-
-  .antenna-svg {
     width: 18px;
     height: 18px;
   }
 
+  .antenna-svg {
+    width: 16px;
+    height: 16px;
+  }
+
   .stat-value {
-    font-size: 1.25rem;
+    font-size: 1.12rem;
     font-weight: 850;
     line-height: 1.1;
   }
 
   .stat-label {
-    font-size: 0.68rem;
-    letter-spacing: 0.04em;
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     font-weight: 700;
     color: var(--text-heading);
-    margin-top: 0.08rem;
+    margin-top: 0.06rem;
   }
 
   /* Responsive Stage Column (Matching webskr.in Screenshot) */

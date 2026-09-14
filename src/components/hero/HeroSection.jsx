@@ -56,7 +56,7 @@ export const HeroSection = ({ onOpenResume }) => {
             </a>
           </div>
 
-          {/* Left Stats Bar (4 Items matching reference photo) */}
+          {/* Left Stats Bar (3 Items matching screenshot: Projects, ECE, India) */}
           <div className="rsk-hero-stats-bar">
             {/* Stat 1: Projects */}
             <div className="stats-item">
@@ -93,20 +93,6 @@ export const HeroSection = ({ onOpenResume }) => {
                 <span className="stat-label">AVAILABLE</span>
               </div>
             </div>
-
-            {/* Stat 4: Scroll Down */}
-            <a href="#about" className="stats-item stat-scroll-link">
-              <span className="stat-icon-scroll" aria-hidden="true">
-                <svg viewBox="0 0 24 24" className="split-circle-svg" fill="none" stroke="currentColor" strokeWidth="2.2">
-                  <circle cx="12" cy="12" r="9.5" stroke="currentColor" strokeWidth="2" />
-                  <line x1="12" y1="2.5" x2="12" y2="21.5" stroke="currentColor" strokeWidth="2" />
-                </svg>
-              </span>
-              <div className="stat-content">
-                <span className="stat-value">SCROLL</span>
-                <span className="stat-label">DOWN &darr;</span>
-              </div>
-            </a>
           </div>
 
         </div>
