@@ -2216,8 +2216,8 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
 
 .skill-schematic-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.65rem;
+  grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+  gap: 0.55rem;
 }
 
 .skill-schematic-thumb-link {
@@ -2238,7 +2238,7 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
 
 .skill-schematic-thumb-img {
   width: 100%;
-  height: 100px;
+  height: 85px;
   object-fit: contain;
   display: block;
   padding: 3px;

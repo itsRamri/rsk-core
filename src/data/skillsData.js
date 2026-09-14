@@ -24,7 +24,19 @@ export const skillsData = [
     level: '2-Layer PCB Layout & Ground Planes',
     percent: 90,
     icon: 'fa-solid fa-bezier-curve',
-    tags: ['Track Routing', 'Ground Pours', 'Footprint Design', 'Design Rule Check', 'BOM Generation']
+    tags: ['Track Routing', 'Ground Pours', 'Footprint Design', 'Design Rule Check', 'BOM Generation'],
+    proofTitle: 'PCB Layout & Routing Proof:',
+    images: [
+      '/PCB/Layout/Screenshot 2025-11-19 000539.png',
+      '/PCB/Layout/Screenshot 2025-11-19 000559.png',
+      '/PCB/Layout/Screenshot 2025-11-19 104726.png',
+      '/PCB/Layout/Screenshot 2025-11-19 104804.png',
+      '/PCB/Layout/Screenshot 2025-11-19 194022.png',
+      '/PCB/Layout/Screenshot 2025-11-19 201106.png',
+      '/PCB/Layout/Screenshot 2025-11-19 201405.png',
+      '/PCB/Layout/Screenshot 2025-11-19 205351.png',
+      '/PCB/Layout/Screenshot 2025-11-19 215802.png'
+    ]
   }
 ];
 
