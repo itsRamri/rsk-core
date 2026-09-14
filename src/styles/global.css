@@ -706,7 +706,7 @@ body[data-mode="dark"] .stats-item:not(:last-child) {
 .rsk-hero-head-ring {
   position: absolute;
   top: 40%;
-  left: calc(50% + 62px);
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 440px;
   height: 440px;
@@ -878,8 +878,23 @@ body[data-mode="dark"] .rsk-script-signature {
   object-position: bottom center;
   display: block;
   filter: contrast(1.03) brightness(0.98);
-  transform: scale(1.06) translateX(62px);
+  transform: scale(1.06) translateX(0);
   transform-origin: bottom center;
+}
+
+/* Horizontal Divider Line between Hero and About/Biography */
+.rsk-hero-bottom-divider {
+  width: 100%;
+  height: 1.2px;
+  background: rgba(120, 107, 90, 0.28);
+  margin: 0;
+  display: block;
+  position: relative;
+  z-index: 20;
+}
+
+body[data-mode="dark"] .rsk-hero-bottom-divider {
+  background: rgba(255, 255, 255, 0.12);
 }
 
 /* Centered Biography Pill Tab at Bottom of Hero */

@@ -188,9 +188,8 @@ export const HeroSection = ({ onOpenResume }) => {
 
         </div>
 
-      </div>
-
-      {/* Centered Biography Pill / Tab removed per user request */}
+      {/* Horizontal Divider Line separating Hero and About/Biography */}
+      <div className="rsk-hero-bottom-divider" aria-hidden="true" />
 
     </section>
   );
