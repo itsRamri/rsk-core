@@ -38,16 +38,7 @@ export const ProjectCard = ({ project, onOpenDetails }) => {
     >
       {/* Circuit Header Visual Banner */}
       <div className="project-card-visual">
-        {project.images && project.images.length > 0 ? (
-          <img
-            src={project.images[0]}
-            alt={project.title}
-            className="project-card-img"
-            loading="lazy"
-          />
-        ) : (
-          <div className="project-circuit-bg"></div>
-        )}
+        <div className="project-circuit-bg"></div>
         <div className="project-type-badge">
           <i className={project.icon}></i>
           <span>{project.categoryLabel}</span>
