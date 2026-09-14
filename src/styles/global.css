@@ -1359,7 +1359,7 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
     margin-top: 0.06rem;
   }
 
-  /* Responsive Stage Column (Clean, unclipped, perfectly responsive portrait) */
+  /* Responsive Stage Column (Centered portrait, perfectly positioned RSK and signature) */
   .rsk-hero-right-col {
     width: 100%;
     max-width: 360px;
@@ -1375,28 +1375,28 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
 
   .rsk-doodle-wrapper {
     position: absolute;
-    top: 10px;
-    left: 4px;
+    top: 8px;
+    left: 2px;
     z-index: 10;
   }
 
   .doodle-text {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     line-height: 1.2;
   }
 
   .doodle-arrow-curved {
-    width: 34px;
-    height: 30px;
-    margin-left: 1rem;
+    width: 32px;
+    height: 28px;
+    margin-left: 0.9rem;
     margin-top: 0.1rem;
   }
 
   .rsk-hero-head-ring {
     top: 130px;
-    left: calc(50% + 25px);
-    width: 310px;
-    height: 310px;
+    left: 50%;
+    width: 300px;
+    height: 300px;
   }
 
   .rsk-giant-letters-bg {
@@ -1418,10 +1418,12 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
     opacity: 0.85;
   }
 
+  /* Cursive Shubham on side over K (Completely off hand and dress) */
   .rsk-script-signature {
-    font-size: 1.7rem;
-    top: 155px;
-    right: 10px;
+    font-size: 1.6rem;
+    top: 140px;
+    right: 2px;
+    transform: rotate(-8deg);
     z-index: 10;
   }
 
@@ -1443,7 +1445,7 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
     max-height: 360px !important;
     object-fit: contain !important;
     object-position: bottom center !important;
-    transform: scale(1.08) translateX(25px) !important;
+    transform: scale(1.06) translateX(0) !important;
     transform-origin: bottom center !important;
     display: block !important;
     margin: 0 auto !important;
