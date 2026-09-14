@@ -63,6 +63,34 @@ export const SkillCard = ({ skill }) => {
           <span key={idx}>{tag}</span>
         ))}
       </div>
+
+      {/* Schematic Diagram Proof Images (Cadence OrCAD CIS) */}
+      {skill.images && skill.images.length > 0 && (
+        <div className="skill-schematic-proof">
+          <span className="skill-schematic-title">
+            <i className="fa-solid fa-file-waveform"></i> Schematic Diagram (OrCAD CIS 17.2):
+          </span>
+          <div className="skill-schematic-grid">
+            {skill.images.map((imgSrc, idx) => (
+              <a
+                key={idx}
+                href={imgSrc}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="skill-schematic-thumb-link"
+                title="Click to open full schematic in new tab"
+              >
+                <img
+                  src={imgSrc}
+                  alt={`${skill.title} schematic proof ${idx + 1}`}
+                  className="skill-schematic-thumb-img"
+                  loading="lazy"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -5,8 +5,7 @@ import { ProjectCard } from './ProjectCard';
 
 const projectFilters = [
   { id: 'all', label: 'All Projects', icon: 'fa-solid fa-layer-group' },
-  { id: 'pcb', label: 'PCB Design', icon: 'fa-solid fa-circuit-board' },
-  { id: 'arduino', label: 'Arduino Projects', icon: 'fa-solid fa-robot' }
+  { id: 'pcb', label: 'PCB Design', icon: 'fa-solid fa-circuit-board' }
 ];
 
 export const ProjectsSection = ({ onSelectProject }) => {

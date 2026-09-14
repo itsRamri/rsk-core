@@ -2194,6 +2194,57 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
   color: var(--text-muted);
 }
 
+/* Schematic Diagram Proof in Skill Card */
+.skill-schematic-proof {
+  margin-top: 0.4rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.skill-schematic-title {
+  font-size: 0.76rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--text-heading);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.skill-schematic-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+
+.skill-schematic-thumb-link {
+  display: block;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1.2px solid var(--border-color);
+  background: #ffffff;
+  transition: var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.skill-schematic-thumb-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand-bronze);
+  box-shadow: var(--shadow-md);
+}
+
+.skill-schematic-thumb-img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+  padding: 3px;
+  background: #ffffff;
+}
+
 /* ==========================================================================
    MODALS (PROJECT SPECS & RESUME)
    ========================================================================== */
