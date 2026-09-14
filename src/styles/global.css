@@ -1359,74 +1359,75 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
     margin-top: 0.06rem;
   }
 
-  /* Responsive Stage Column (Matching webskr.in Screenshot) */
+  /* Responsive Stage Column (Matching zoomed-in webskr.in Screenshot) */
   .rsk-hero-right-col {
     width: 100%;
-    max-width: 340px;
-    height: auto;
-    margin: 1.2rem auto 0;
+    max-width: 420px;
+    height: 440px;
+    margin: 1.5rem auto 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     position: relative;
-    overflow: visible;
+    overflow: hidden;
   }
 
   .rsk-doodle-wrapper {
-    top: 12px;
-    left: 4px;
+    position: absolute;
+    top: 20px;
+    left: 8px;
     z-index: 10;
   }
 
   .doodle-text {
-    font-size: 0.85rem;
+    font-size: 0.92rem;
     line-height: 1.2;
   }
 
   .doodle-arrow-curved {
-    width: 34px;
-    height: 30px;
-    margin-left: 1rem;
+    width: 38px;
+    height: 34px;
+    margin-left: 1.2rem;
     margin-top: 0.1rem;
   }
 
   .rsk-hero-head-ring {
-    top: 115px;
-    left: calc(50% + 24px);
-    width: 270px;
-    height: 270px;
+    top: 170px;
+    left: calc(50% + 35px);
+    width: 360px;
+    height: 360px;
   }
 
   .rsk-giant-letters-bg {
-    top: 120px;
+    top: 180px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 300px;
+    max-width: 370px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    padding: 0 0.5rem;
     z-index: 2;
     pointer-events: none;
   }
 
   .giant-char {
-    font-size: clamp(5.4rem, 18vw, 6.4rem);
+    font-size: clamp(6.6rem, 21vw, 8.2rem);
     opacity: 0.85;
   }
 
   .rsk-script-signature {
-    font-size: 1.65rem;
-    top: 138px;
-    right: -6px;
+    font-size: 2.2rem;
+    top: 205px;
+    right: -10px;
     z-index: 10;
   }
 
   .rsk-cutout-container {
     width: 100%;
-    height: 330px;
+    height: 440px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -1437,36 +1438,34 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
 
   .rsk-cutout-image {
     width: auto !important;
-    max-width: 90% !important;
+    max-width: none !important;
     height: 100% !important;
-    max-height: 330px !important;
+    max-height: 440px !important;
     object-fit: contain !important;
     object-position: bottom center !important;
-    transform: translateX(24px) !important;
+    transform: scale(1.38) translateX(25px) !important;
+    transform-origin: bottom center !important;
     display: block !important;
     margin: 0 auto !important;
   }
 
-  /* Tagline below photo on mobile */
+  /* Tagline top-right matching reference image */
   .rsk-stacked-tagline {
-    position: relative;
-    top: auto;
-    right: auto;
+    position: absolute;
+    top: 25px;
+    right: 12px;
     bottom: auto;
     left: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.9rem;
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
-    margin-top: 1.2rem;
-    margin-bottom: 0.5rem;
+    flex-direction: column;
+    text-align: right;
+    gap: 0.2rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    margin: 0;
     color: var(--text-heading);
     z-index: 10;
-    width: 100%;
-    text-align: center;
+    width: auto;
   }
 
   .rsk-hero-bottom-bar {
