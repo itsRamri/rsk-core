@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useTheme } from '../../context/ThemeContext';
 
 export const Navbar = () => {
-  const { mode, toggleMode } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
@@ -76,22 +74,8 @@ export const Navbar = () => {
             </ul>
           </nav>
 
-          {/* Right: Theme Toggle + LET'S TALK ↗ Button + Mobile Hamburger */}
+          {/* Right: LET'S TALK ↗ Button + Mobile Hamburger */}
           <div className="rsk-nav-actions">
-            {/* Theme Toggle Button (Moon / Sun) */}
-            <button
-              type="button"
-              className="rsk-theme-toggle-btn"
-              onClick={toggleMode}
-              aria-label="Toggle theme mode"
-              title={`Switch to ${mode === 'dark' ? 'light' : 'dark'} mode`}
-            >
-              {mode === 'dark' ? (
-                <i className="fa-solid fa-sun theme-icon-sun"></i>
-              ) : (
-                <i className="fa-solid fa-moon theme-icon-moon"></i>
-              )}
-            </button>
 
             {/* Let's Talk CTA */}
             <a

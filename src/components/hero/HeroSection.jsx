@@ -116,33 +116,35 @@ export const HeroSection = ({ onOpenResume }) => {
             ------------------------------------------------------------ */}
         <div className="rsk-hero-right-col">
 
-          {/* Dual Concentric Dashed Orbit Arcs (Arching above head, completely clear of RSK letters) */}
+          {/* Dual Concentric Dashed Orbit Rings (Matching reference image) */}
           <div className="rsk-hero-head-ring" aria-hidden="true">
             <svg viewBox="0 0 500 500" className="dskr-ring-svg">
-              {/* Inner Arc */}
-              <path
-                d="M 112 195 A 150 150 0 0 1 388 195"
+              {/* Inner Dashed Circle */}
+              <circle
+                cx="250"
+                cy="235"
+                r="160"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="1.3"
-                strokeDasharray="4 6"
-                strokeLinecap="round"
+                strokeWidth="1.2"
+                strokeDasharray="5 7"
                 className="ring-dashed-inner"
               />
-              {/* Outer Arc (slightly larger) */}
-              <path
-                d="M 52 172 A 215 215 0 0 1 448 172"
+              {/* Outer Dashed Circle */}
+              <circle
+                cx="250"
+                cy="235"
+                r="225"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="1.3"
-                strokeDasharray="4 6"
-                strokeLinecap="round"
+                strokeWidth="1.2"
+                strokeDasharray="5 7"
                 className="ring-dashed-outer"
               />
             </svg>
           </div>
 
-          {/* Top-Left Handwritten Doodle with smooth rightward arrow over letter R */}
+          {/* Top-Left Handwritten Doodle with smooth downward arrow (Matching reference) */}
           <div className="rsk-doodle-wrapper" aria-hidden="true">
             <div className="doodle-text">
               <span>App Development</span>
@@ -178,43 +180,9 @@ export const HeroSection = ({ onOpenResume }) => {
             <span className="giant-char char-k">K</span>
           </div>
 
-          {/* Cursive Overlapping Signature Shubham (Lower down, clear of hand/arm) */}
+          {/* Cursive Overlapping Signature Shubham over bottom-right of K (Exact Match to Deepak in reference) */}
           <div className="rsk-script-signature" aria-hidden="true">
             <span>Shubham</span>
-          </div>
-
-          {/* PCB Circuit Traces Graphic (Exact Image 3 Reference Match) */}
-          <div className="rsk-pcb-traces-svg" aria-hidden="true">
-            <svg viewBox="0 0 260 300" className="pcb-svg" fill="none">
-              {/* Top vertical stem with dot */}
-              <circle cx="230" cy="22" r="3.5" fill="#786B5A" />
-              <line x1="230" y1="22" x2="230" y2="100" stroke="#786B5A" strokeWidth="1.6" strokeLinecap="round" />
-              
-              {/* 45° diagonal segment from vertical stem to main junction */}
-              <line x1="230" y1="100" x2="160" y2="170" stroke="#786B5A" strokeWidth="1.6" strokeLinecap="round" />
-
-              {/* Parallel double track on upper-right of diagonal */}
-              <line x1="202" y1="132" x2="168" y2="166" stroke="#786B5A" strokeWidth="1.4" strokeLinecap="round" />
-              <circle cx="202" cy="132" r="3.5" fill="#786B5A" />
-
-              {/* Horizontal spur to the left */}
-              <line x1="160" y1="170" x2="85" y2="170" stroke="#786B5A" strokeWidth="1.6" strokeLinecap="round" />
-
-              {/* Central junction dot */}
-              <circle cx="160" cy="170" r="3.5" fill="#786B5A" />
-
-              {/* Branch 1 (diagonal -> horizontal -> diagonal) */}
-              <line x1="160" y1="170" x2="110" y2="220" stroke="#786B5A" strokeWidth="1.6" strokeLinecap="round" />
-              <line x1="110" y1="220" x2="38" y2="220" stroke="#786B5A" strokeWidth="1.6" strokeLinecap="round" />
-              <circle cx="38" cy="220" r="3.5" fill="#786B5A" />
-              <line x1="38" y1="220" x2="10" y2="248" stroke="#786B5A" strokeWidth="1.6" strokeLinecap="round" />
-              <circle cx="10" cy="248" r="3.5" fill="#786B5A" />
-
-              {/* Branch 2 (vertical down -> diagonal) */}
-              <line x1="160" y1="170" x2="160" y2="230" stroke="#786B5A" strokeWidth="1.6" strokeLinecap="round" />
-              <line x1="160" y1="230" x2="115" y2="275" stroke="#786B5A" strokeWidth="1.6" strokeLinecap="round" />
-              <circle cx="115" cy="275" r="3.5" fill="#786B5A" />
-            </svg>
           </div>
 
           {/* Cutout Portrait Image Stage (Centered directly over S) */}
