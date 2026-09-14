@@ -1124,9 +1124,10 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
 
   .rsk-hero-head-ring {
     top: 130px;
-    left: calc(50% + 38px);
-    width: 320px;
-    height: 320px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
   }
 
   .rsk-giant-letters-bg {
@@ -1135,19 +1136,19 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 330px;
+    max-width: 320px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0.5rem;
+    padding: 0;
     z-index: 2;
     pointer-events: none;
   }
 
   .giant-char {
-    font-size: clamp(6.2rem, 19vw, 8.5rem);
+    font-size: clamp(5.6rem, 18vw, 6.8rem);
     letter-spacing: -0.04em;
-    opacity: 0.75;
+    opacity: 0.85;
   }
 
   .char-r { flex: 1; text-align: left; }
@@ -1156,9 +1157,10 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
 
   .rsk-script-signature {
     position: absolute;
-    top: 155px;
-    right: 8px;
-    font-size: clamp(1.8rem, 4.8vw, 2.3rem);
+    top: 140px;
+    right: 2px;
+    font-size: 1.6rem;
+    transform: rotate(-8deg);
     z-index: 10;
   }
 
@@ -1175,12 +1177,13 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
 
   .rsk-cutout-image {
     width: auto !important;
-    max-width: 90% !important;
+    max-width: 95% !important;
     height: 100% !important;
     max-height: 360px !important;
     object-fit: contain !important;
     object-position: bottom center !important;
-    transform: translateX(38px) !important;
+    transform: scale(1.06) translateX(0) !important;
+    transform-origin: bottom center !important;
     display: block !important;
     margin: 0 auto !important;
   }
