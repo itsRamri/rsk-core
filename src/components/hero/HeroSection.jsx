@@ -5,9 +5,6 @@ export const HeroSection = ({ onOpenResume }) => {
 
   return (
     <section className="rsk-new-hero-section" id="hero">
-      
-      {/* Decorative Plus Marker */}
-      <div className="rsk-plus-marker marker-mid" aria-hidden="true">+</div>
 
       {/* ============================================================
           MAIN HERO CONTENT (2-Column Grid)
