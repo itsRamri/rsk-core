@@ -1359,75 +1359,75 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
     margin-top: 0.06rem;
   }
 
-  /* Responsive Stage Column (Matching zoomed-in webskr.in Screenshot) */
+  /* Responsive Stage Column (Clean, unclipped, perfectly responsive portrait) */
   .rsk-hero-right-col {
     width: 100%;
-    max-width: 420px;
-    height: 440px;
-    margin: 1.5rem auto 0;
+    max-width: 360px;
+    height: auto;
+    margin: 1.2rem auto 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .rsk-doodle-wrapper {
     position: absolute;
-    top: 20px;
-    left: 8px;
+    top: 10px;
+    left: 4px;
     z-index: 10;
   }
 
   .doodle-text {
-    font-size: 0.92rem;
+    font-size: 0.85rem;
     line-height: 1.2;
   }
 
   .doodle-arrow-curved {
-    width: 38px;
-    height: 34px;
-    margin-left: 1.2rem;
+    width: 34px;
+    height: 30px;
+    margin-left: 1rem;
     margin-top: 0.1rem;
   }
 
   .rsk-hero-head-ring {
-    top: 170px;
-    left: calc(50% + 35px);
-    width: 360px;
-    height: 360px;
+    top: 130px;
+    left: calc(50% + 25px);
+    width: 310px;
+    height: 310px;
   }
 
   .rsk-giant-letters-bg {
-    top: 180px;
+    top: 140px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 370px;
+    max-width: 320px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0.5rem;
+    padding: 0;
     z-index: 2;
     pointer-events: none;
   }
 
   .giant-char {
-    font-size: clamp(6.6rem, 21vw, 8.2rem);
+    font-size: clamp(5.6rem, 18vw, 6.8rem);
     opacity: 0.85;
   }
 
   .rsk-script-signature {
-    font-size: 2.2rem;
-    top: 205px;
-    right: -10px;
+    font-size: 1.85rem;
+    top: 155px;
+    right: -8px;
     z-index: 10;
   }
 
   .rsk-cutout-container {
     width: 100%;
-    height: 440px;
+    height: 360px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -1438,34 +1438,37 @@ body[data-mode="dark"] .rsk-hero-bio-tab {
 
   .rsk-cutout-image {
     width: auto !important;
-    max-width: none !important;
+    max-width: 95% !important;
     height: 100% !important;
-    max-height: 440px !important;
+    max-height: 360px !important;
     object-fit: contain !important;
     object-position: bottom center !important;
-    transform: scale(1.38) translateX(25px) !important;
+    transform: scale(1.08) translateX(25px) !important;
     transform-origin: bottom center !important;
     display: block !important;
     margin: 0 auto !important;
   }
 
-  /* Tagline top-right matching reference image */
+  /* Tagline below photo on mobile */
   .rsk-stacked-tagline {
-    position: absolute;
-    top: 25px;
-    right: 12px;
+    position: relative;
+    top: auto;
+    right: auto;
     bottom: auto;
     left: auto;
     display: flex;
-    flex-direction: column;
-    text-align: right;
-    gap: 0.2rem;
-    font-size: 0.68rem;
-    letter-spacing: 0.22em;
-    margin: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.9rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
     color: var(--text-heading);
     z-index: 10;
-    width: auto;
+    width: 100%;
+    text-align: center;
   }
 
   .rsk-hero-bottom-bar {
