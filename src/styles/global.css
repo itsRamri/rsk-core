@@ -609,7 +609,7 @@ body[data-mode="dark"] .stats-item:not(:last-child) {
 }
 
 .stat-icon {
-  font-size: 1.05rem;
+  font-size: 0.92rem;
   color: var(--text-heading);
   line-height: 1;
 }
@@ -620,13 +620,13 @@ body[data-mode="dark"] .stats-item:not(:last-child) {
   justify-content: center;
   color: var(--text-heading);
   line-height: 1;
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
 }
 
 .antenna-svg {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   display: block;
 }
 
@@ -635,10 +635,12 @@ body[data-mode="dark"] .stats-item:not(:last-child) {
   color: inherit;
   cursor: pointer;
   transition: var(--transition-fast);
+  opacity: 0.85;
 }
 
 .stat-scroll-link:hover {
   color: var(--brand-bronze);
+  opacity: 1;
 }
 
 .stat-icon-scroll {
@@ -646,13 +648,13 @@ body[data-mode="dark"] .stats-item:not(:last-child) {
   align-items: center;
   justify-content: center;
   color: var(--text-heading);
-  width: 22px;
-  height: 22px;
+  width: 17px;
+  height: 17px;
 }
 
-.mouse-svg {
-  width: 20px;
-  height: 20px;
+.split-circle-svg {
+  width: 16px;
+  height: 16px;
   display: block;
 }
 
@@ -663,7 +665,7 @@ body[data-mode="dark"] .stats-item:not(:last-child) {
 
 .stat-value {
   font-family: var(--font-heading);
-  font-size: 1.18rem;
+  font-size: 1.05rem;
   font-weight: 850;
   color: var(--text-heading);
   line-height: 1.1;
@@ -671,12 +673,20 @@ body[data-mode="dark"] .stats-item:not(:last-child) {
 }
 
 .stat-label {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 750;
   letter-spacing: 0.12em;
   color: var(--text-heading);
-  margin-top: 0.1rem;
+  margin-top: 0.08rem;
   text-transform: uppercase;
+}
+
+.stat-scroll-link .stat-value {
+  font-size: 0.9rem;
+}
+
+.stat-scroll-link .stat-label {
+  font-size: 0.56rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -710,11 +720,11 @@ body[data-mode="dark"] .rsk-hero-head-ring {
   color: rgba(255, 255, 255, 0.35);
 }
 
-/* Top-Left Handwritten Doodle (Positioned over letter R) */
+/* Top-Left Handwritten Doodle (Positioned tight & close over letter R) */
 .rsk-doodle-wrapper {
   position: absolute;
-  top: 6%;
-  left: -25px;
+  top: 21%;
+  left: -6px;
   z-index: 12;
   pointer-events: none;
   user-select: none;
